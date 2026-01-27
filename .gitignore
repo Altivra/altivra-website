@@ -1,0 +1,44 @@
+# Dependencies
+node_modules/
+
+# Environment files (NEVER commit these)
+.env
+.env.local
+.env.production
+*.env
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Build outputs
+dist/
+build/
+.cache/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Uploads (if large files)
+uploads/*.jpg
+uploads/*.png
+uploads/*.gif
+uploads/*.mp4
+!uploads/.gitkeep
+
+# Local Netlify folder
+.netlify/
+
+# Credentials (NEVER commit)
+*credentials*
+*secret*
+*.pem
+*.key
