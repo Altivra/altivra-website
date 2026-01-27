@@ -144,7 +144,7 @@
             </a>
             <ul class="nav-links">
                 <li><a href="#what-we-do">What We Do</a></li>
-                <li><a href="#who-its-for">Who It's For</a></li>
+                <li><a href="case-studies.html">Case Studies</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="#faq">FAQ</a></li>
@@ -357,43 +357,8 @@
                 <h2>What Our Clients Say</h2>
                 <p>Real results from real businesses</p>
             </div>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <p>"Altivra transformed our quoting process completely. What used to take our team 3 hours now takes 5 minutes. The accuracy is remarkable."</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">JT</div>
-                        <div class="testimonial-info">
-                            <strong>James Tan</strong>
-                            <span>COO, Professional Services Firm</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <p>"Finally, an AI solution that actually understands our complex product catalog. No more hallucinations, no more wrong answers to customers."</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">SL</div>
-                        <div class="testimonial-info">
-                            <strong>Sarah Lee</strong>
-                            <span>Head of Operations, Trading Platform</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <p>"The team at Altivra didn't just build us a tool — they understood our business first. That's rare in this space."</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">MR</div>
-                        <div class="testimonial-info">
-                            <strong>Michael Reyes</strong>
-                            <span>Founder, EdTech Startup</span>
-                        </div>
-                    </div>
-                </div>
+            <div class="testimonials-grid" id="testimonials-grid">
+                <!-- Loaded dynamically from testimonials.json -->
             </div>
         </div>
     </section>
@@ -499,10 +464,10 @@
                 </div>
                 <div class="footer-links">
                     <a href="#what-we-do">What We Do</a>
+                    <a href="case-studies.html">Case Studies</a>
                     <a href="about.html">About</a>
                     <a href="blog.html">Blog</a>
                     <a href="privacy.html">Privacy</a>
-                    <a href="terms.html">Terms</a>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -513,6 +478,36 @@
 
     <script src="script.js"></script>
     <script>
+        // Load testimonials dynamically
+        async function loadTestimonials() {
+            try {
+                const response = await fetch('testimonials.json');
+                const data = await response.json();
+                const grid = document.getElementById('testimonials-grid');
+
+                if (data.testimonials && data.testimonials.length > 0) {
+                    grid.innerHTML = data.testimonials.map(t => `
+                        <div class="testimonial-card">
+                            <div class="testimonial-content">
+                                <p>"${t.quote}"</p>
+                            </div>
+                            <div class="testimonial-author">
+                                <div class="testimonial-avatar">${t.initials}</div>
+                                <div class="testimonial-info">
+                                    <strong>${t.name}</strong>
+                                    <span>${t.role}, ${t.company}</span>
+                                </div>
+                            </div>
+                        </div>
+                    `).join('');
+                }
+            } catch (e) {
+                console.error('Error loading testimonials:', e);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', loadTestimonials);
+
         // Handle Netlify Identity redirects
         if (window.netlifyIdentity) {
             window.netlifyIdentity.on("init", user => {

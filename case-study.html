@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Case Study | Altivra</title>
+    <meta name="description" id="meta-description" content="">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" id="canonical-url" href="">
+
+    <meta property="og:type" content="article">
+    <meta property="og:url" id="og-url" content="">
+    <meta property="og:title" id="og-title" content="">
+    <meta property="og:description" id="og-description" content="">
+    <meta property="og:image" id="og-image" content="https://altivra.com/og-image.jpg">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="logo-icon.png">
+    <link rel="apple-touch-icon" href="logo-icon.png">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="logo-full.png" alt="Altivra" class="logo-img">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html#what-we-do">What We Do</a></li>
+                <li><a href="case-studies.html" class="active">Case Studies</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="index.html#faq">FAQ</a></li>
+            </ul>
+            <a href="index.html#book-call" class="btn btn-primary nav-cta">Book a Call</a>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Case Study Content -->
+    <article class="case-study-article">
+        <div class="container">
+            <!-- Breadcrumb -->
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+                <ol>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="case-studies.html">Case Studies</a></li>
+                    <li id="breadcrumb-title">Case Study</li>
+                </ol>
+            </nav>
+
+            <!-- Header -->
+            <header class="case-study-header">
+                <div class="case-study-meta">
+                    <span class="case-study-industry" id="cs-industry"></span>
+                    <span class="case-study-location" id="cs-location"></span>
+                </div>
+                <h1 id="cs-title"></h1>
+                <p class="case-study-client" id="cs-client"></p>
+            </header>
+
+            <!-- Results Summary -->
+            <div class="case-study-results-box" id="cs-results-box">
+                <h3>Key Results</h3>
+                <div class="results-list" id="cs-results"></div>
+            </div>
+
+            <!-- Featured Image -->
+            <div class="case-study-image" id="cs-image-container" style="display: none;">
+                <img id="cs-image" src="" alt="">
+            </div>
+
+            <!-- Content -->
+            <div class="case-study-content" id="cs-content">
+                <!-- Loaded dynamically -->
+            </div>
+
+            <!-- Testimonial -->
+            <div class="case-study-testimonial" id="cs-testimonial-box">
+                <blockquote id="cs-testimonial"></blockquote>
+                <cite id="cs-testimonial-author"></cite>
+            </div>
+
+            <!-- CTA -->
+            <div class="case-study-cta">
+                <h3>Want similar results?</h3>
+                <p>Let's discuss how AI can transform your operations.</p>
+                <a href="https://calendar.app.google/ACvMiYPV8cS63ct88" class="btn btn-primary" target="_blank" rel="noopener">Book a Discovery Call</a>
+            </div>
+
+            <!-- Other Case Studies -->
+            <div class="other-case-studies">
+                <h3>More Case Studies</h3>
+                <div class="other-case-studies-grid" id="other-case-studies"></div>
+            </div>
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="logo-full.png" alt="Altivra" class="footer-logo">
+                    <p>Custom AI systems for revenue and operations.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html#what-we-do">What We Do</a>
+                    <a href="case-studies.html">Case Studies</a>
+                    <a href="about.html">About</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="privacy.html">Privacy</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Altivra. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        let caseStudiesData = [];
+
+        async function loadCaseStudyData() {
+            try {
+                const response = await fetch('case-studies.json');
+                const data = await response.json();
+                caseStudiesData = data.caseStudies || [];
+            } catch (e) {
+                console.error('Error loading case studies:', e);
+            }
+        }
+
+        function loadCaseStudy(slug) {
+            const cs = caseStudiesData.find(c => c.slug === slug);
+
+            if (!cs) {
+                window.location.href = 'case-studies.html';
+                return;
+            }
+
+            // Update page content
+            document.getElementById('cs-title').textContent = cs.title;
+            document.getElementById('cs-client').textContent = cs.client;
+            document.getElementById('cs-industry').textContent = cs.industry;
+            document.getElementById('cs-location').textContent = cs.location;
+            document.getElementById('cs-content').innerHTML = cs.content;
+            document.getElementById('breadcrumb-title').textContent = cs.title;
+
+            // Results
+            document.getElementById('cs-results').innerHTML = cs.results.map(r =>
+                `<div class="result-item">${r}</div>`
+            ).join('');
+
+            // Testimonial
+            if (cs.testimonial) {
+                document.getElementById('cs-testimonial').textContent = `"${cs.testimonial}"`;
+                document.getElementById('cs-testimonial-author').textContent = `— ${cs.testimonialAuthor}`;
+            } else {
+                document.getElementById('cs-testimonial-box').style.display = 'none';
+            }
+
+            // Image
+            if (cs.image) {
+                document.getElementById('cs-image').src = cs.image;
+                document.getElementById('cs-image').alt = cs.title;
+                document.getElementById('cs-image-container').style.display = 'block';
+            }
+
+            // SEO
+            document.getElementById('page-title').textContent = `${cs.title} | Altivra Case Study`;
+            document.getElementById('meta-description').content = cs.challenge;
+            document.getElementById('canonical-url').href = `https://altivra.com/case-study.html?slug=${slug}`;
+            document.getElementById('og-url').content = `https://altivra.com/case-study.html?slug=${slug}`;
+            document.getElementById('og-title').content = cs.title;
+            document.getElementById('og-description').content = cs.challenge;
+
+            // Other case studies
+            const others = caseStudiesData.filter(c => c.slug !== slug).slice(0, 2);
+            document.getElementById('other-case-studies').innerHTML = others.map(o => `
+                <a href="case-study.html?slug=${o.slug}" class="other-case-study-card">
+                    <span class="other-cs-industry">${o.industry}</span>
+                    <h4>${o.title}</h4>
+                    <span class="other-cs-link">Read case study →</span>
+                </a>
+            `).join('');
+        }
+
+        document.addEventListener('DOMContentLoaded', async function() {
+            await loadCaseStudyData();
+            const urlParams = new URLSearchParams(window.location.search);
+            const slug = urlParams.get('slug');
+            if (slug) {
+                loadCaseStudy(slug);
+            } else {
+                window.location.href = 'case-studies.html';
+            }
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

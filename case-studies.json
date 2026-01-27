@@ -1,0 +1,42 @@
+{
+  "caseStudies": [
+    {
+      "slug": "quote-automation-professional-services",
+      "title": "From 3 Hours to 5 Minutes: Quote Automation",
+      "client": "Professional Services Firm",
+      "industry": "Professional Services",
+      "location": "Singapore",
+      "challenge": "Sales team spending 40% of time on manual quote generation",
+      "solution": "Custom AI system connected to CRM, ERP, and product database",
+      "results": [
+        "Quote time: 3 hours → 5 minutes",
+        "Error rate down 90%",
+        "Sales capacity up 35%"
+      ],
+      "testimonial": "What used to take our team 3 hours now takes 5 minutes. The accuracy is remarkable.",
+      "testimonialAuthor": "James Tan, COO",
+      "image": "",
+      "featured": true,
+      "content": "<h2>The Challenge</h2><p>A professional services firm in Singapore was struggling with their quoting process. Their sales team spent nearly 40% of their time pulling together quotes — gathering product specs, checking pricing rules, accounting for customer history, and ensuring compliance.</p><p>The information existed across multiple systems — their CRM, ERP, product database, and pricing spreadsheets. But piecing it together was manual, tedious, and error-prone.</p><h2>The Solution</h2><p>We built a custom AI system that:</p><ul><li>Connects to all their data sources in real-time</li><li>Understands their specific products and pricing logic</li><li>Generates accurate quotes based on customer requirements</li><li>Flags anything unusual for human review</li></ul><p>The key wasn't replacing human judgment — it was eliminating the manual data gathering and calculation that consumed most of the time.</p><h2>The Results</h2><p>Within 4 weeks of deployment:</p><ul><li><strong>Quote generation time:</strong> Reduced from 3 hours to 5 minutes</li><li><strong>Error rate:</strong> Down 90%</li><li><strong>Sales team capacity:</strong> Up 35% — now focused on selling, not admin</li></ul><h2>Key Takeaway</h2><p>AI isn't about replacing people. It's about eliminating the tedious work so people can focus on what actually requires human intelligence: building relationships, solving complex problems, closing deals.</p>"
+    },
+    {
+      "slug": "document-processing-carbon-marketplace",
+      "title": "Automating Document Processing for Carbon Trading",
+      "client": "Carbon Marketplace",
+      "industry": "Climate & ESG",
+      "location": "Singapore",
+      "challenge": "Manual processing of carbon credit documentation taking days",
+      "solution": "AI-powered document extraction and validation system",
+      "results": [
+        "Processing time: Days → Minutes",
+        "Accuracy: 99.2%",
+        "Volume capacity: 10x increase"
+      ],
+      "testimonial": "We can now process in minutes what used to take our team days. The accuracy is better than manual review.",
+      "testimonialAuthor": "Operations Lead",
+      "image": "",
+      "featured": true,
+      "content": "<h2>The Challenge</h2><p>A carbon credit marketplace needed to process hundreds of documents daily — verification reports, certification documents, and compliance paperwork. Each document required careful extraction of key data points and validation against multiple criteria.</p><p>Their team was spending days on document processing, creating a bottleneck that slowed down trading operations.</p><h2>The Solution</h2><p>We developed an AI system that:</p><ul><li>Extracts key information from PDFs automatically</li><li>Validates data against compliance requirements</li><li>Flags discrepancies for human review</li><li>Integrates directly with their trading platform</li></ul><h2>The Results</h2><ul><li><strong>Processing time:</strong> Reduced from days to minutes</li><li><strong>Accuracy:</strong> 99.2% — higher than manual processing</li><li><strong>Capacity:</strong> Can now handle 10x the document volume</li></ul>"
+    }
+  ]
+}
