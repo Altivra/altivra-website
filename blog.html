@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <title>Blog | Altivra - AI Insights for Business Operations</title>
+    <meta name="description" content="Practical insights on AI systems, automation, and operational efficiency for B2B businesses. No fluff, just real-world applications.">
+    <meta name="keywords" content="AI for business, automation, operational efficiency, custom AI systems, B2B AI, workflow automation">
+    <meta name="author" content="Altivra">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://altivra.com/blog">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://altivra.com/blog">
+    <meta property="og:title" content="Blog | Altivra - AI Insights for Business Operations">
+    <meta property="og:description" content="Practical insights on AI systems, automation, and operational efficiency for B2B businesses.">
+    <meta property="og:image" content="https://altivra.com/og-blog.jpg">
+    <meta property="og:site_name" content="Altivra">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://altivra.com/blog">
+    <meta name="twitter:title" content="Blog | Altivra - AI Insights for Business Operations">
+    <meta name="twitter:description" content="Practical insights on AI systems, automation, and operational efficiency for B2B businesses.">
+    <meta name="twitter:image" content="https://altivra.com/og-blog.jpg">
+
+    <!-- Structured Data for Blog -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        "name": "Altivra Blog",
+        "description": "Practical insights on AI systems, automation, and operational efficiency for B2B businesses.",
+        "url": "https://altivra.com/blog",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Altivra",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://altivra.com/logo-full.png"
+            }
+        }
+    }
+    </script>
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="logo-full.png" alt="Altivra" class="logo-img">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html#what-we-do">What We Do</a></li>
+                <li><a href="index.html#who-its-for">Who It's For</a></li>
+                <li><a href="index.html#how-it-works">How It Works</a></li>
+                <li><a href="blog.html" class="active">Blog</a></li>
+                <li><a href="index.html#faq">FAQ</a></li>
+            </ul>
+            <a href="index.html#book-call" class="btn btn-primary nav-cta">Book a Call</a>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Blog Header -->
+    <header class="blog-header">
+        <div class="container">
+            <h1>Blog</h1>
+            <p>Practical insights on AI, automation, and operational efficiency. No buzzwords, just what works.</p>
+        </div>
+    </header>
+
+    <!-- Blog Posts Grid -->
+    <main class="blog-main">
+        <div class="container">
+            <!-- Category Filter -->
+            <div class="blog-filters">
+                <button class="filter-btn active" data-category="all">All</button>
+                <button class="filter-btn" data-category="ai-systems">AI Systems</button>
+                <button class="filter-btn" data-category="automation">Automation</button>
+                <button class="filter-btn" data-category="case-studies">Case Studies</button>
+                <button class="filter-btn" data-category="insights">Insights</button>
+            </div>
+
+            <!-- Posts Grid -->
+            <div class="posts-grid" id="posts-grid">
+                <!-- Posts will be loaded here dynamically -->
+            </div>
+
+            <!-- Empty State -->
+            <div class="empty-state" id="empty-state" style="display: none;">
+                <p>No posts yet. Check back soon.</p>
+            </div>
+
+            <!-- Load More -->
+            <div class="load-more-container" id="load-more-container" style="display: none;">
+                <button class="btn btn-secondary" id="load-more-btn">Load More</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Newsletter CTA -->
+    <section class="blog-cta">
+        <div class="container">
+            <div class="blog-cta-content">
+                <h2>Want AI insights delivered to your inbox?</h2>
+                <p>No spam. Just practical, revenue-focused AI insights for business leaders.</p>
+                <form class="newsletter-form" id="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="logo-full.png" alt="Altivra" class="footer-logo">
+                    <p>Custom AI systems for revenue and operations.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html#what-we-do">What We Do</a>
+                    <a href="index.html#who-its-for">Who It's For</a>
+                    <a href="index.html#how-it-works">How It Works</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="index.html#faq">FAQ</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Altivra. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="blog.js"></script>
+</body>
+</html>

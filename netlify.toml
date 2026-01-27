@@ -1,0 +1,16 @@
+[build]
+  publish = "."
+
+# Redirect for clean URLs (optional)
+[[redirects]]
+  from = "/blog/*"
+  to = "/post.html?slug=:splat"
+  status = 200
+
+# Headers for SEO
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
