@@ -1,0 +1,14 @@
+# Robots.txt for Altivra
+# https://altivra.com
+
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://altivra.com/sitemap.xml
+
+# Crawl-delay (optional, for politeness)
+Crawl-delay: 1
+
+# Disallow admin areas
+Disallow: /admin/

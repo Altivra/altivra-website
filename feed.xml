@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+     xmlns:atom="http://www.w3.org/2005/Atom"
+     xmlns:content="http://purl.org/rss/1.0/modules/content/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Altivra Blog</title>
+    <link>https://altivra.com/blog.html</link>
+    <description>Practical insights on AI systems, automation, and operational efficiency for B2B businesses.</description>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 27 Jan 2026 00:00:00 GMT</lastBuildDate>
+    <atom:link href="https://altivra.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <image>
+      <url>https://altivra.com/logo-full.png</url>
+      <title>Altivra Blog</title>
+      <link>https://altivra.com</link>
+    </image>
+
+    <item>
+      <title>Why Generic AI Tools Fail Complex Businesses</title>
+      <link>https://altivra.com/post.html?slug=why-generic-ai-fails-complex-businesses</link>
+      <guid isPermaLink="true">https://altivra.com/post.html?slug=why-generic-ai-fails-complex-businesses</guid>
+      <pubDate>Sat, 25 Jan 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Altivra Team</dc:creator>
+      <category>AI Systems</category>
+      <description>ChatGPT and off-the-shelf AI tools promise the world. But when you're dealing with complex products, internal data, and high-stakes decisions, they fall short. Here's why — and what actually works.</description>
+    </item>
+
+    <item>
+      <title>From Hours to Minutes: Automating Quote Generation with AI</title>
+      <link>https://altivra.com/post.html?slug=from-hours-to-minutes-quote-generation</link>
+      <guid isPermaLink="true">https://altivra.com/post.html?slug=from-hours-to-minutes-quote-generation</guid>
+      <pubDate>Mon, 20 Jan 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Altivra Team</dc:creator>
+      <category>Case Studies</category>
+      <description>How we helped a professional services firm cut their quoting time from 3 hours to 5 minutes — without sacrificing accuracy or losing the human touch.</description>
+    </item>
+
+    <item>
+      <title>Is Your Business Ready for AI? A Practical Checklist</title>
+      <link>https://altivra.com/post.html?slug=ai-readiness-checklist-for-operations</link>
+      <guid isPermaLink="true">https://altivra.com/post.html?slug=ai-readiness-checklist-for-operations</guid>
+      <pubDate>Wed, 15 Jan 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Altivra Team</dc:creator>
+      <category>Insights</category>
+      <description>Not every business is ready for AI. Here's how to assess whether you're in a position to actually benefit from custom AI systems — and what to fix first if you're not.</description>
+    </item>
+
+  </channel>
+</rss>
