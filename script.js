@@ -44,9 +44,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
-            navbar.style.boxShadow = '0 1px 10px rgba(0, 0, 0, 0.1)';
+            navbar.classList.add('scrolled');
         } else {
-            navbar.style.boxShadow = 'none';
+            navbar.classList.remove('scrolled');
         }
     });
 
@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (mobileMenuBtn) {
         mobileMenuBtn.addEventListener('click', () => {
-            navLinks.classList.toggle('mobile-active');
+            navLinks.classList.toggle('active');
             mobileMenuBtn.classList.toggle('active');
         });
     }
