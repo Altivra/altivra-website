@@ -2305,3 +2305,307 @@ a {
         font-size: 0.85rem;
     }
 }
+
+/* ===================================
+   CREDIBILITY ELEMENTS
+   =================================== */
+
+/* Trusted By Section */
+.trusted-by-section {
+    padding: 60px 0;
+}
+
+.trusted-by-label {
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--text-light);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 32px;
+}
+
+.client-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+    flex-wrap: wrap;
+}
+
+.client-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    opacity: 0.6;
+    transition: var(--transition);
+    filter: grayscale(100%);
+}
+
+.client-logo:hover {
+    opacity: 1;
+    filter: grayscale(0%);
+}
+
+.client-logo img {
+    max-height: 40px;
+    max-width: 120px;
+    object-fit: contain;
+}
+
+.client-logo span {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    padding: 12px 24px;
+    background: var(--bg-card);
+    border-radius: var(--border-radius-xs);
+    white-space: nowrap;
+}
+
+/* Trust Badges Section */
+.trust-badges-section {
+    padding: 40px 0;
+}
+
+.trust-badges {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.trust-badge {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.trust-badge-icon {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(74, 222, 128, 0.15);
+    border-radius: 12px;
+    color: var(--accent);
+}
+
+.trust-badge-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.trust-badge-text strong {
+    font-size: 0.9rem;
+    color: var(--white);
+    font-weight: 600;
+}
+
+.trust-badge-text span {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Footer Contact & Social */
+.footer-contact {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.footer-contact a {
+    color: var(--accent);
+    font-size: 0.95rem;
+}
+
+.footer-contact a:hover {
+    text-decoration: underline;
+}
+
+.footer-contact span {
+    font-size: 0.85rem;
+    color: var(--text-light);
+}
+
+.footer-social {
+    display: flex;
+    gap: 16px;
+}
+
+.footer-social a {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: var(--text-secondary);
+    transition: var(--transition);
+}
+
+.footer-social a:hover {
+    background: var(--accent);
+    color: var(--bg-dark);
+}
+
+/* Enhanced Team Card with Photo */
+.team-card-featured {
+    display: flex;
+    gap: 40px;
+    padding: 40px;
+    background: var(--bg-card);
+    border-radius: var(--border-radius);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.team-photo {
+    flex-shrink: 0;
+    width: 180px;
+    height: 180px;
+    border-radius: var(--border-radius-sm);
+    overflow: hidden;
+    position: relative;
+}
+
+.team-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team-avatar-fallback {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    font-weight: 600;
+    color: var(--white);
+}
+
+.team-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.team-card-featured h3 {
+    font-size: 1.5rem;
+    margin-bottom: 4px;
+}
+
+.team-card-featured .team-role {
+    font-size: 1rem;
+    color: var(--accent-dark);
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.team-card-featured .team-bio {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+.team-credentials {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.credential {
+    display: inline-block;
+    padding: 6px 12px;
+    background: #f5f5f5;
+    border-radius: 100px;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+.team-card-featured .team-linkedin {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.team-card-featured .team-linkedin:hover {
+    color: #0077b5;
+}
+
+.team-card-featured .team-linkedin svg {
+    width: 18px;
+    height: 18px;
+}
+
+/* Credibility Responsive */
+@media (max-width: 768px) {
+    .client-logos {
+        gap: 24px;
+    }
+
+    .client-logo {
+        height: 32px;
+    }
+
+    .client-logo img {
+        max-height: 32px;
+        max-width: 100px;
+    }
+
+    .trust-badges {
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+    }
+
+    .trust-badge {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .team-card-featured {
+        flex-direction: column;
+        text-align: center;
+        padding: 32px;
+    }
+
+    .team-photo {
+        width: 140px;
+        height: 140px;
+        margin: 0 auto;
+    }
+
+    .team-credentials {
+        justify-content: center;
+    }
+
+    .team-card-featured .team-linkedin {
+        justify-content: center;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 32px;
+        text-align: center;
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+    }
+
+    .footer-social {
+        justify-content: center;
+    }
+}
