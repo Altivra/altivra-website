@@ -3452,3 +3452,45 @@ a {
         grid-template-columns: 1fr;
     }
 }
+
+/* ===================================
+   404 ERROR PAGE
+   =================================== */
+
+.error-page {
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 140px 0 80px;
+}
+
+.error-content {
+    text-align: center;
+    max-width: 500px;
+}
+
+.error-content h1 {
+    font-size: 8rem;
+    font-weight: 700;
+    color: var(--accent);
+    line-height: 1;
+    margin-bottom: 16px;
+}
+
+.error-content h2 {
+    font-size: 2rem;
+    margin-bottom: 16px;
+}
+
+.error-content p {
+    font-size: 1.1rem;
+    margin-bottom: 32px;
+}
+
+.error-actions {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+}

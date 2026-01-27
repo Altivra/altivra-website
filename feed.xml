@@ -6,9 +6,9 @@
   <channel>
     <title>Altivra Blog</title>
     <link>https://altivra.com/blog.html</link>
-    <description>Practical insights on AI systems, automation, and operational efficiency for B2B businesses.</description>
+    <description>Practical insights on AI systems, automation, and operational efficiency for B2B businesses in Southeast Asia.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 27 Jan 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 28 Jan 2026 00:00:00 GMT</lastBuildDate>
     <atom:link href="https://altivra.com/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://altivra.com/logo-full.png</url>
@@ -17,11 +17,41 @@
     </image>
 
     <item>
+      <title>AI Automation in Southeast Asia: 2026 Trends and Opportunities</title>
+      <link>https://altivra.com/post.html?slug=ai-automation-southeast-asia-2026-trends</link>
+      <guid isPermaLink="true">https://altivra.com/post.html?slug=ai-automation-southeast-asia-2026-trends</guid>
+      <pubDate>Tue, 28 Jan 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Alexander Lee</dc:creator>
+      <category>AI Systems</category>
+      <description>Southeast Asia is experiencing an AI automation boom unlike anywhere else in the world. From Singapore's financial services to Thailand's manufacturing sector to Indonesia's growing digital economy, businesses are racing to implement AI systems that actually work.</description>
+    </item>
+
+    <item>
+      <title>How to Choose an AI Vendor: A Practical Guide for Business Leaders</title>
+      <link>https://altivra.com/post.html?slug=how-to-choose-ai-vendor-guide</link>
+      <guid isPermaLink="true">https://altivra.com/post.html?slug=how-to-choose-ai-vendor-guide</guid>
+      <pubDate>Mon, 27 Jan 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Alexander Lee</dc:creator>
+      <category>Insights</category>
+      <description>The AI vendor landscape is crowded and confusing. Every company claims to offer "cutting-edge AI solutions" but most deliver glorified chatbots or expensive pilots that never reach production. Here's how to separate the real from the hype.</description>
+    </item>
+
+    <item>
+      <title>The ROI of AI Automation: Real Numbers from Real Projects</title>
+      <link>https://altivra.com/post.html?slug=ai-automation-roi-real-numbers</link>
+      <guid isPermaLink="true">https://altivra.com/post.html?slug=ai-automation-roi-real-numbers</guid>
+      <pubDate>Sun, 26 Jan 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Alexander Lee</dc:creator>
+      <category>Case Studies</category>
+      <description>Everyone talks about AI ROI in theory. We're going to show you actual numbers from actual projects — what businesses invested, what they got back, and how long it took.</description>
+    </item>
+
+    <item>
       <title>Why Generic AI Tools Fail Complex Businesses</title>
       <link>https://altivra.com/post.html?slug=why-generic-ai-fails-complex-businesses</link>
       <guid isPermaLink="true">https://altivra.com/post.html?slug=why-generic-ai-fails-complex-businesses</guid>
       <pubDate>Sat, 25 Jan 2026 00:00:00 GMT</pubDate>
-      <dc:creator>Altivra Team</dc:creator>
+      <dc:creator>Alexander Lee</dc:creator>
       <category>AI Systems</category>
       <description>ChatGPT and off-the-shelf AI tools promise the world. But when you're dealing with complex products, internal data, and high-stakes decisions, they fall short. Here's why — and what actually works.</description>
     </item>
@@ -31,19 +61,29 @@
       <link>https://altivra.com/post.html?slug=from-hours-to-minutes-quote-generation</link>
       <guid isPermaLink="true">https://altivra.com/post.html?slug=from-hours-to-minutes-quote-generation</guid>
       <pubDate>Mon, 20 Jan 2026 00:00:00 GMT</pubDate>
-      <dc:creator>Altivra Team</dc:creator>
+      <dc:creator>Alexander Lee</dc:creator>
       <category>Case Studies</category>
       <description>How we helped a professional services firm cut their quoting time from 3 hours to 5 minutes — without sacrificing accuracy or losing the human touch.</description>
     </item>
 
     <item>
-      <title>Is Your Business Ready for AI? A Practical Checklist</title>
+      <title>Is Your Business Ready for AI? A Practical Checklist for Operations Leaders</title>
       <link>https://altivra.com/post.html?slug=ai-readiness-checklist-for-operations</link>
       <guid isPermaLink="true">https://altivra.com/post.html?slug=ai-readiness-checklist-for-operations</guid>
       <pubDate>Wed, 15 Jan 2026 00:00:00 GMT</pubDate>
-      <dc:creator>Altivra Team</dc:creator>
+      <dc:creator>Alexander Lee</dc:creator>
       <category>Insights</category>
       <description>Not every business is ready for AI. Here's how to assess whether you're in a position to actually benefit from custom AI systems — and what to fix first if you're not.</description>
+    </item>
+
+    <item>
+      <title>5 Signs Your Business Needs AI Automation (And 3 Signs It Doesn't)</title>
+      <link>https://altivra.com/post.html?slug=signs-business-needs-ai-automation</link>
+      <guid isPermaLink="true">https://altivra.com/post.html?slug=signs-business-needs-ai-automation</guid>
+      <pubDate>Fri, 10 Jan 2026 00:00:00 GMT</pubDate>
+      <dc:creator>Alexander Lee</dc:creator>
+      <category>Insights</category>
+      <description>AI automation isn't for everyone. Here's how to know if your business is ready to benefit from custom AI systems, or if you should focus on other improvements first.</description>
     </item>
 
   </channel>
