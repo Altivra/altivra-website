@@ -1,0 +1,74 @@
+{
+  "posts": [
+    {
+      "slug": "ai-automation-southeast-asia-2026-trends",
+      "title": "AI Automation in Southeast Asia: 2026 Trends and Opportunities",
+      "date": "2026-01-28",
+      "author": "Alexander Lee",
+      "category": "insights",
+      "excerpt": "Southeast Asia is experiencing an AI revolution. From Singapore to Indonesia, businesses are adopting automation at unprecedented rates. Here's what's driving the change and where the opportunities lie.",
+      "readTime": "6 min read",
+      "image": ""
+    },
+    {
+      "slug": "how-to-choose-ai-vendor-guide",
+      "title": "How to Choose an AI Vendor: A Practical Guide for Business Leaders",
+      "date": "2026-01-26",
+      "author": "Alexander Lee",
+      "category": "insights",
+      "excerpt": "The AI vendor landscape is crowded and confusing. Here's how to cut through the noise and find a partner who will actually deliver results for your business.",
+      "readTime": "7 min read",
+      "image": ""
+    },
+    {
+      "slug": "roi-of-ai-automation-real-numbers",
+      "title": "The ROI of AI Automation: Real Numbers from Real Projects",
+      "date": "2026-01-24",
+      "author": "Alexander Lee",
+      "category": "case-studies",
+      "excerpt": "AI ROI can be transformative — but only with the right projects. Here's what realistic returns look like, based on actual implementations we've done.",
+      "readTime": "5 min read",
+      "image": ""
+    },
+    {
+      "slug": "why-generic-ai-fails-complex-businesses",
+      "title": "Why Generic AI Tools Fail Complex Businesses",
+      "date": "2026-01-22",
+      "author": "Alexander Lee",
+      "category": "ai-systems",
+      "excerpt": "ChatGPT and off-the-shelf AI tools promise the world. But when you're dealing with complex products, internal data, and high-stakes decisions, they fall short. Here's why — and what actually works.",
+      "readTime": "4 min read",
+      "image": ""
+    },
+    {
+      "slug": "from-hours-to-minutes-quote-generation",
+      "title": "From Hours to Minutes: Automating Quote Generation with AI",
+      "date": "2026-01-20",
+      "author": "Alexander Lee",
+      "category": "case-studies",
+      "excerpt": "How we helped a professional services firm cut their quoting time from 3 hours to 5 minutes — without sacrificing accuracy or losing the human touch.",
+      "readTime": "3 min read",
+      "image": ""
+    },
+    {
+      "slug": "ai-readiness-checklist-for-operations",
+      "title": "Is Your Business Ready for AI? A Practical Checklist",
+      "date": "2026-01-15",
+      "author": "Alexander Lee",
+      "category": "insights",
+      "excerpt": "Not every business is ready for AI. Here's how to assess whether you're in a position to actually benefit from custom AI systems — and what to fix first if you're not.",
+      "readTime": "5 min read",
+      "image": ""
+    },
+    {
+      "slug": "5-signs-business-needs-ai-automation",
+      "title": "5 Signs Your Business Needs AI Automation (Not Just Better Software)",
+      "date": "2026-01-10",
+      "author": "Alexander Lee",
+      "category": "insights",
+      "excerpt": "Traditional software automates simple tasks. AI automates complex ones. Here's how to know which you actually need.",
+      "readTime": "4 min read",
+      "image": ""
+    }
+  ]
+}

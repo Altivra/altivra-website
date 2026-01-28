@@ -203,11 +203,13 @@
         </div>
     </footer>
 
+    <!-- Markdown Parser -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script src="blog.js"></script>
     <script>
         // Load post based on URL parameter
         document.addEventListener('DOMContentLoaded', async function() {
-            await loadPostsData();
+            await loadPostsIndex();
             const urlParams = new URLSearchParams(window.location.search);
             const slug = urlParams.get('slug');
             if (slug) {

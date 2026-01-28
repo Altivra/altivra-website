@@ -1,151 +1,14 @@
 // Blog System JavaScript
-// Works with Netlify CMS - reads from posts.json
+// Reads from Markdown files in /posts/ directory
 
-const SITE_URL = 'https://altivra.com'; // Update this after deployment
+const SITE_URL = 'https://altivra.com';
 
-// Sample posts data - This will be replaced by Netlify CMS
-let postsData = [
-    {
-        slug: "why-generic-ai-fails-complex-businesses",
-        title: "Why Generic AI Tools Fail Complex Businesses",
-        excerpt: "ChatGPT and off-the-shelf AI tools promise the world. But when you're dealing with complex products, internal data, and high-stakes decisions, they fall short. Here's why — and what actually works.",
-        content: `
-            <p>Every week, a new AI tool promises to revolutionize your business. Just plug it in, they say. It'll handle everything.</p>
+let postsData = [];
 
-            <p>But if you've tried using ChatGPT or similar tools for real business operations, you've probably noticed something: <strong>they hallucinate on your specific data</strong>.</p>
-
-            <h2>The Problem with Generic AI</h2>
-
-            <p>Generic AI tools are trained on the internet. They know a lot about a lot of things. But they don't know:</p>
-
-            <ul>
-                <li>Your product catalog and pricing rules</li>
-                <li>Your historical transactions and customer patterns</li>
-                <li>Your internal processes and compliance requirements</li>
-                <li>The nuances of your industry</li>
-            </ul>
-
-            <p>When you ask them to generate a quote, process a document, or answer a customer question, they're essentially guessing. Sometimes they're right. Often they're confidently wrong.</p>
-
-            <h2>What Actually Works</h2>
-
-            <p>The businesses seeing real ROI from AI aren't using off-the-shelf tools. They're building custom systems that:</p>
-
-            <ol>
-                <li><strong>Connect to their actual data</strong> — PDFs, databases, emails, historical records</li>
-                <li><strong>Understand their specific context</strong> — products, processes, terminology</li>
-                <li><strong>Integrate into existing workflows</strong> — not a separate tool, but part of how work gets done</li>
-                <li><strong>Prioritize accuracy over impressiveness</strong> — because wrong answers are worse than no answers</li>
-            </ol>
-
-            <h2>The Bottom Line</h2>
-
-            <p>If your business deals with complexity — complex products, complex data, complex decisions — generic AI won't cut it. You need AI that's built for your specific reality.</p>
-
-            <p>That's what we build at Altivra. Not impressive demos, but production systems your team uses daily.</p>
-        `,
-        category: "ai-systems",
-        author: "Altivra Team",
-        date: "2026-01-25",
-        readTime: "4 min read",
-        image: "",
-        keywords: ["AI for business", "custom AI", "ChatGPT limitations", "enterprise AI", "B2B automation"]
-    },
-    {
-        slug: "from-hours-to-minutes-quote-generation",
-        title: "From Hours to Minutes: Automating Quote Generation with AI",
-        excerpt: "How we helped a professional services firm cut their quoting time from 3 hours to 5 minutes — without sacrificing accuracy or losing the human touch.",
-        content: `
-            <p>Quote generation is one of those tasks that seems simple until you actually do it. Pull product specs, check pricing rules, account for customer history, factor in current promotions, ensure compliance... suddenly three hours have passed.</p>
-
-            <h2>The Challenge</h2>
-
-            <p>A professional services firm came to us with a problem: their sales team was spending 40% of their time on quote generation. Not selling. Not building relationships. Just pulling together quotes.</p>
-
-            <p>The information existed — in PDFs, spreadsheets, their CRM, and their ERP. But piecing it together was manual, tedious, and error-prone.</p>
-
-            <h2>The Solution</h2>
-
-            <p>We built a custom AI system that:</p>
-
-            <ul>
-                <li>Connects to all their data sources (CRM, ERP, product database, pricing rules)</li>
-                <li>Understands their specific products and pricing logic</li>
-                <li>Generates accurate quotes based on customer requirements</li>
-                <li>Flags anything unusual for human review</li>
-            </ul>
-
-            <p>The key wasn't replacing human judgment — it was eliminating the manual data gathering and calculation that consumed most of the time.</p>
-
-            <h2>The Results</h2>
-
-            <ul>
-                <li><strong>Quote generation time:</strong> 3 hours → 5 minutes</li>
-                <li><strong>Error rate:</strong> Down 90%</li>
-                <li><strong>Sales team capacity:</strong> Up 35%</li>
-            </ul>
-
-            <h2>The Lesson</h2>
-
-            <p>AI isn't about replacing people. It's about eliminating the tedious work so people can focus on what actually requires human intelligence: building relationships, solving complex problems, closing deals.</p>
-        `,
-        category: "case-studies",
-        author: "Altivra Team",
-        date: "2026-01-20",
-        readTime: "3 min read",
-        image: "",
-        keywords: ["quote automation", "sales automation", "AI case study", "operational efficiency", "B2B sales"]
-    },
-    {
-        slug: "ai-readiness-checklist-for-operations",
-        title: "Is Your Business Ready for AI? A Practical Checklist",
-        excerpt: "Not every business is ready for AI. Here's how to assess whether you're in a position to actually benefit from custom AI systems — and what to fix first if you're not.",
-        content: `
-            <p>AI is not magic. It's a tool. And like any tool, it works best when certain conditions are met.</p>
-
-            <p>Before investing in custom AI systems, ask yourself these questions:</p>
-
-            <h2>1. Do you have a clear, repetitive process that takes significant time?</h2>
-
-            <p>AI excels at automating well-defined, repetitive tasks. If your team spends hours doing the same type of work — processing documents, generating reports, answering similar questions — that's a good candidate.</p>
-
-            <p><strong>Red flag:</strong> "We want AI to figure out what we should do." AI augments clear processes; it doesn't create strategy from scratch.</p>
-
-            <h2>2. Is your data accessible?</h2>
-
-            <p>AI needs data to work with. If your critical information is scattered across paper files, personal email inboxes, and tribal knowledge, you need to digitize and organize first.</p>
-
-            <p><strong>Good signs:</strong> Data in databases, CRMs, structured documents, accessible APIs.</p>
-
-            <h2>3. Do you have volume?</h2>
-
-            <p>If you process 5 documents a month, automation might not be worth it. If you process 500, the math changes dramatically.</p>
-
-            <h2>4. Can you measure success?</h2>
-
-            <p>Before building, you should know: What does "working" look like? Time saved? Errors reduced? Revenue increased? If you can't measure it, you can't prove value.</p>
-
-            <h2>5. Do you have someone who owns this?</h2>
-
-            <p>AI projects need an internal champion — someone who understands the process, can make decisions, and will ensure adoption. Without this, even great systems fail.</p>
-
-            <h2>The Bottom Line</h2>
-
-            <p>If you checked all five boxes, you're ready. If not, that's okay — focus on getting those foundations in place first. The AI will still be here when you're ready.</p>
-        `,
-        category: "insights",
-        author: "Altivra Team",
-        date: "2026-01-15",
-        readTime: "5 min read",
-        image: "",
-        keywords: ["AI readiness", "digital transformation", "business automation", "AI implementation", "operational efficiency"]
-    }
-];
-
-// Load posts from JSON file (for Netlify CMS)
-async function loadPostsData() {
+// Load posts index for listing page
+async function loadPostsIndex() {
     try {
-        const response = await fetch('posts.json');
+        const response = await fetch('posts-index.json');
         if (response.ok) {
             const data = await response.json();
             if (data.posts && data.posts.length > 0) {
@@ -153,9 +16,57 @@ async function loadPostsData() {
             }
         }
     } catch (e) {
-        // Use default sample posts if JSON doesn't exist yet
-        console.log('Using sample posts data');
+        console.error('Error loading posts index:', e);
     }
+}
+
+// Parse frontmatter from Markdown file
+function parseFrontmatter(content) {
+    const match = content.match(/^---\n([\s\S]*?)\n---\n([\s\S]*)$/);
+    if (!match) return { metadata: {}, content: content };
+
+    const frontmatter = match[1];
+    const markdown = match[2];
+
+    const metadata = {};
+    frontmatter.split('\n').forEach(line => {
+        const colonIndex = line.indexOf(':');
+        if (colonIndex > 0) {
+            const key = line.slice(0, colonIndex).trim();
+            let value = line.slice(colonIndex + 1).trim();
+            // Remove quotes
+            if ((value.startsWith('"') && value.endsWith('"')) ||
+                (value.startsWith("'") && value.endsWith("'"))) {
+                value = value.slice(1, -1);
+            }
+            metadata[key] = value;
+        }
+    });
+
+    return { metadata, content: markdown };
+}
+
+// Load individual markdown post
+async function loadMarkdownPost(slug) {
+    try {
+        const response = await fetch(`posts/${slug}.md`);
+        if (response.ok) {
+            const text = await response.text();
+            const { metadata, content } = parseFrontmatter(text);
+
+            // Convert markdown to HTML using marked.js
+            const htmlContent = marked.parse(content);
+
+            return {
+                ...metadata,
+                slug: slug,
+                content: htmlContent
+            };
+        }
+    } catch (e) {
+        console.error('Error loading post:', e);
+    }
+    return null;
 }
 
 // Render blog posts grid
@@ -191,64 +102,75 @@ function renderPosts(posts, container) {
     `).join('');
 }
 
-// Load individual post
-function loadPost(slug) {
-    const post = postsData.find(p => p.slug === slug);
+// Load individual post page
+async function loadPost(slug) {
+    // First get metadata from index
+    const postMeta = postsData.find(p => p.slug === slug);
+
+    if (!postMeta) {
+        window.location.href = 'blog.html';
+        return;
+    }
+
+    // Load full markdown content
+    const post = await loadMarkdownPost(slug);
 
     if (!post) {
         window.location.href = 'blog.html';
         return;
     }
 
+    // Merge metadata
+    const fullPost = { ...postMeta, ...post };
+
     // Update page content
-    document.getElementById('post-title').textContent = post.title;
-    document.getElementById('post-excerpt').textContent = post.excerpt;
-    document.getElementById('post-category').textContent = formatCategory(post.category);
-    document.getElementById('post-date').textContent = formatDate(post.date);
-    document.getElementById('post-read-time').textContent = post.readTime;
-    document.getElementById('post-author').textContent = post.author;
-    document.getElementById('post-content').innerHTML = post.content;
-    document.getElementById('breadcrumb-title').textContent = post.title;
+    document.getElementById('post-title').textContent = fullPost.title;
+    document.getElementById('post-excerpt').textContent = fullPost.excerpt;
+    document.getElementById('post-category').textContent = formatCategory(fullPost.category);
+    document.getElementById('post-date').textContent = formatDate(fullPost.date);
+    document.getElementById('post-read-time').textContent = fullPost.readTime;
+    document.getElementById('post-author').textContent = fullPost.author;
+    document.getElementById('post-content').innerHTML = fullPost.content;
+    document.getElementById('breadcrumb-title').textContent = fullPost.title;
 
     // Handle featured image
     const imageContainer = document.getElementById('post-image-container');
-    if (post.image) {
-        document.getElementById('post-image').src = post.image;
-        document.getElementById('post-image').alt = post.title;
+    if (fullPost.image) {
+        document.getElementById('post-image').src = fullPost.image;
+        document.getElementById('post-image').alt = fullPost.title;
     } else {
         imageContainer.style.display = 'none';
     }
 
     // Update SEO meta tags
     const pageUrl = `${SITE_URL}/post.html?slug=${slug}`;
-    document.getElementById('page-title').textContent = `${post.title} | Altivra Blog`;
-    document.getElementById('meta-description').content = post.excerpt;
-    document.getElementById('meta-keywords').content = post.keywords ? post.keywords.join(', ') : '';
+    document.getElementById('page-title').textContent = `${fullPost.title} | Altivra Blog`;
+    document.getElementById('meta-description').content = fullPost.excerpt;
     document.getElementById('canonical-url').href = pageUrl;
 
     // Open Graph
     document.getElementById('og-url').content = pageUrl;
-    document.getElementById('og-title').content = post.title;
-    document.getElementById('og-description').content = post.excerpt;
-    document.getElementById('og-image').content = post.image || `${SITE_URL}/og-default.jpg`;
-    document.getElementById('og-published').content = post.date;
+    document.getElementById('og-title').content = fullPost.title;
+    document.getElementById('og-description').content = fullPost.excerpt;
+    document.getElementById('og-image').content = fullPost.image || `${SITE_URL}/og-image.jpg`;
+    document.getElementById('og-published').content = fullPost.date;
 
     // Twitter
     document.getElementById('twitter-url').content = pageUrl;
-    document.getElementById('twitter-title').content = post.title;
-    document.getElementById('twitter-description').content = post.excerpt;
-    document.getElementById('twitter-image').content = post.image || `${SITE_URL}/og-default.jpg`;
+    document.getElementById('twitter-title').content = fullPost.title;
+    document.getElementById('twitter-description').content = fullPost.excerpt;
+    document.getElementById('twitter-image').content = fullPost.image || `${SITE_URL}/og-image.jpg`;
 
     // Structured Data
     const schema = {
         "@context": "https://schema.org",
         "@type": "Article",
-        "headline": post.title,
-        "description": post.excerpt,
-        "image": post.image || `${SITE_URL}/og-default.jpg`,
+        "headline": fullPost.title,
+        "description": fullPost.excerpt,
+        "image": fullPost.image || `${SITE_URL}/og-image.jpg`,
         "author": {
-            "@type": "Organization",
-            "name": post.author
+            "@type": "Person",
+            "name": fullPost.author
         },
         "publisher": {
             "@type": "Organization",
@@ -258,18 +180,17 @@ function loadPost(slug) {
                 "url": `${SITE_URL}/logo-full.png`
             }
         },
-        "datePublished": post.date,
-        "dateModified": post.date,
+        "datePublished": fullPost.date,
+        "dateModified": fullPost.date,
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": pageUrl
-        },
-        "keywords": post.keywords ? post.keywords.join(', ') : ''
+        }
     };
     document.getElementById('article-schema').textContent = JSON.stringify(schema);
 
     // Share buttons
-    const shareTitle = encodeURIComponent(post.title);
+    const shareTitle = encodeURIComponent(fullPost.title);
     const shareUrl = encodeURIComponent(pageUrl);
 
     document.getElementById('share-linkedin').href = `https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`;
@@ -282,7 +203,7 @@ function loadPost(slug) {
     });
 
     // Load related posts
-    loadRelatedPosts(post);
+    loadRelatedPosts(fullPost);
 }
 
 // Load related posts
@@ -292,9 +213,7 @@ function loadRelatedPosts(currentPost) {
 
     const related = postsData
         .filter(p => p.slug !== currentPost.slug)
-        .filter(p => p.category === currentPost.category ||
-                     (currentPost.keywords && p.keywords &&
-                      p.keywords.some(k => currentPost.keywords.includes(k))))
+        .filter(p => p.category === currentPost.category)
         .slice(0, 3);
 
     if (related.length === 0) {
@@ -339,7 +258,7 @@ function formatDate(dateString) {
 
 // Initialize blog page
 document.addEventListener('DOMContentLoaded', async function() {
-    await loadPostsData();
+    await loadPostsIndex();
 
     const postsGrid = document.getElementById('posts-grid');
     if (postsGrid) {
@@ -361,7 +280,6 @@ document.addEventListener('DOMContentLoaded', async function() {
         newsletterForm.addEventListener('submit', function(e) {
             e.preventDefault();
             const email = this.querySelector('input[type="email"]').value;
-            // Replace with actual newsletter signup
             alert('Thanks for subscribing! (Connect this to your email service)');
             this.reset();
         });
