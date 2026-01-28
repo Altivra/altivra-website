@@ -3669,6 +3669,155 @@ a {
 }
 
 /* ===================================
+   TRUST BADGES - LIGHT VERSION
+   =================================== */
+
+.trust-badges-section-light {
+    padding: 60px 0;
+    background: var(--bg-card);
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.trust-badges-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+}
+
+.trust-badge-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 24px 16px;
+    background: var(--bg-main);
+    border-radius: var(--border-radius-sm);
+    border: 1px solid var(--border-color);
+}
+
+.trust-badge-icon-box {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(74, 222, 128, 0.1);
+    border-radius: 12px;
+    margin-bottom: 16px;
+}
+
+.trust-badge-card strong {
+    display: block;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+}
+
+.trust-badge-card span {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+/* ===================================
+   TECH STACK / POWERED BY
+   =================================== */
+
+.tech-stack-section {
+    padding: 48px 0;
+    background: var(--bg-main);
+    overflow: hidden;
+}
+
+.tech-stack-label {
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 32px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.tech-logos-scroll {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.tech-logos-scroll::before,
+.tech-logos-scroll::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.tech-logos-scroll::before {
+    left: 0;
+    background: linear-gradient(90deg, var(--bg-main), transparent);
+}
+
+.tech-logos-scroll::after {
+    right: 0;
+    background: linear-gradient(-90deg, var(--bg-main), transparent);
+}
+
+.tech-logos-track {
+    display: flex;
+    gap: 60px;
+    animation: scrollLogos 30s linear infinite;
+    width: max-content;
+}
+
+.tech-logo {
+    flex-shrink: 0;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tech-logo:hover {
+    opacity: 1;
+}
+
+.tech-logo svg {
+    width: 40px;
+    height: 40px;
+}
+
+@keyframes scrollLogos {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 968px) {
+    .trust-badges-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (max-width: 640px) {
+    .trust-badges-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tech-logos-track {
+        gap: 40px;
+    }
+}
+
+/* ===================================
    UPDATED HERO WITH PRODUCT VISUAL
    =================================== */
 
