@@ -158,6 +158,245 @@ body::before {
     50% { box-shadow: 0 0 40px rgba(74, 222, 128, 0.5); }
 }
 
+/* ===================================
+   PREMIUM BREATHING & GLOW EFFECTS
+   =================================== */
+
+/* Breathing glow for buttons */
+.btn-primary {
+    animation: breatheGlow 3s ease-in-out infinite;
+}
+
+@keyframes breatheGlow {
+    0%, 100% {
+        box-shadow: 0 4px 15px rgba(74, 222, 128, 0.3);
+    }
+    50% {
+        box-shadow: 0 6px 30px rgba(74, 222, 128, 0.5);
+    }
+}
+
+/* Breathing glow for highlighted elements */
+.process-step-highlight {
+    animation: breatheBorder 3s ease-in-out infinite;
+}
+
+@keyframes breatheBorder {
+    0%, 100% {
+        border-color: rgba(74, 222, 128, 0.6);
+        box-shadow: 0 0 20px rgba(74, 222, 128, 0.1);
+    }
+    50% {
+        border-color: rgba(74, 222, 128, 1);
+        box-shadow: 0 0 40px rgba(74, 222, 128, 0.25);
+    }
+}
+
+/* Floating animation */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+.float-element {
+    animation: float 4s ease-in-out infinite;
+}
+
+/* Product visual floating */
+.hero-product-preview {
+    animation: floatSlow 6s ease-in-out infinite;
+}
+
+@keyframes floatSlow {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(0.5deg); }
+}
+
+/* Shimmer effect on cards hover */
+.usecase-card::before,
+.testimonial-card::before,
+.why-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+    transition: left 0.6s ease;
+    z-index: 1;
+}
+
+.usecase-card:hover::before,
+.testimonial-card:hover::before,
+.why-item:hover::before {
+    left: 100%;
+}
+
+.usecase-card,
+.testimonial-card,
+.why-item {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Smooth hover lift */
+.usecase-card,
+.testimonial-card,
+.trust-badge-card,
+.why-item,
+.audience-card,
+.problem-card {
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.usecase-card:hover,
+.testimonial-card:hover,
+.trust-badge-card:hover,
+.why-item:hover,
+.audience-card:hover,
+.problem-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Stat number glow */
+.stat-number {
+    text-shadow: 0 0 30px rgba(74, 222, 128, 0.3);
+}
+
+/* Step number pulse */
+.step-number {
+    animation: stepPulse 2s ease-in-out infinite;
+}
+
+@keyframes stepPulse {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.4);
+    }
+    50% {
+        transform: scale(1.02);
+        box-shadow: 0 0 0 10px rgba(74, 222, 128, 0);
+    }
+}
+
+/* Icon badge breathing */
+.step-badge {
+    animation: badgeBreath 2s ease-in-out infinite;
+}
+
+@keyframes badgeBreath {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 2px 10px rgba(74, 222, 128, 0.3);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 4px 20px rgba(74, 222, 128, 0.5);
+    }
+}
+
+/* Reveal animations */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+                transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.animate-on-scroll.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.animate-child {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.animate-child.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Progress bar animation */
+.progress-bar {
+    height: 6px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    width: 0;
+    background: linear-gradient(90deg, var(--accent), var(--accent-dark));
+    border-radius: 3px;
+    transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Magnetic button effect */
+.btn-magnetic {
+    transition: transform 0.2s ease;
+}
+
+/* Trust badge icon subtle animation */
+.trust-badge-icon-box {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.trust-badge-card:hover .trust-badge-icon-box {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 10px 30px rgba(74, 222, 128, 0.3);
+}
+
+/* Tech logo hover effect */
+.tech-logo {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.tech-logo:hover {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+/* CTA section enhanced glow */
+.cta-section .container {
+    position: relative;
+}
+
+.cta-section .container::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(135deg, var(--accent), transparent, var(--accent));
+    border-radius: calc(var(--border-radius) + 2px);
+    z-index: -1;
+    opacity: 0.5;
+    animation: borderGlow 3s ease-in-out infinite;
+}
+
+@keyframes borderGlow {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 0.6; }
+}
+
+/* Testimonial avatar pulse */
+.testimonial-avatar {
+    animation: avatarPulse 3s ease-in-out infinite;
+}
+
+@keyframes avatarPulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.2); }
+    50% { box-shadow: 0 0 0 8px rgba(74, 222, 128, 0); }
+}
+
 /* Reset & Base */
 *, *::before, *::after {
     box-sizing: border-box;
