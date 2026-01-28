@@ -97,4 +97,43 @@ document.addEventListener('DOMContentLoaded', function() {
         problemSection.style.transform = 'translateY(0)';
     }
 
+    // Contact Form Handler
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const formData = {
+                name: document.getElementById('contact-name').value,
+                email: document.getElementById('contact-email').value,
+                company: document.getElementById('contact-company').value,
+                challenge: document.getElementById('contact-challenge').value,
+                details: document.getElementById('contact-details').value
+            };
+
+            // For now, show success message
+            // TODO: Connect to email service (Formspree, Netlify Forms, etc.)
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+
+            submitBtn.textContent = 'Sending...';
+            submitBtn.disabled = true;
+
+            // Simulate submission (replace with actual API call)
+            setTimeout(() => {
+                submitBtn.textContent = 'Message Sent!';
+                submitBtn.style.background = '#22c55e';
+                contactForm.reset();
+
+                setTimeout(() => {
+                    submitBtn.textContent = originalText;
+                    submitBtn.style.background = '';
+                    submitBtn.disabled = false;
+                }, 3000);
+            }, 1000);
+
+            console.log('Form submitted:', formData);
+        });
+    }
+
 });

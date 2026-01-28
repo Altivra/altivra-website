@@ -5,7 +5,7 @@
 
   <!-- Homepage -->
   <url>
-    <loc>https://altivra.com/</loc>
+    <loc>https://altivra.co/</loc>
     <lastmod>2026-01-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -13,7 +13,7 @@
 
   <!-- Case Studies Listing -->
   <url>
-    <loc>https://altivra.com/case-studies.html</loc>
+    <loc>https://altivra.co/case-studies.html</loc>
     <lastmod>2026-01-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -21,7 +21,7 @@
 
   <!-- About Page -->
   <url>
-    <loc>https://altivra.com/about.html</loc>
+    <loc>https://altivra.co/about.html</loc>
     <lastmod>2026-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -29,7 +29,7 @@
 
   <!-- Blog Listing -->
   <url>
-    <loc>https://altivra.com/blog.html</loc>
+    <loc>https://altivra.co/blog.html</loc>
     <lastmod>2026-01-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
@@ -37,21 +37,21 @@
 
   <!-- Blog Posts -->
   <url>
-    <loc>https://altivra.com/post.html?slug=why-generic-ai-fails-complex-businesses</loc>
+    <loc>https://altivra.co/post.html?slug=why-generic-ai-fails-complex-businesses</loc>
     <lastmod>2026-01-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://altivra.com/post.html?slug=from-hours-to-minutes-quote-generation</loc>
+    <loc>https://altivra.co/post.html?slug=from-hours-to-minutes-quote-generation</loc>
     <lastmod>2026-01-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://altivra.com/post.html?slug=ai-readiness-checklist-for-operations</loc>
+    <loc>https://altivra.co/post.html?slug=ai-readiness-checklist-for-operations</loc>
     <lastmod>2026-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -59,14 +59,14 @@
 
   <!-- Case Studies -->
   <url>
-    <loc>https://altivra.com/case-study.html?slug=quote-automation-professional-services</loc>
+    <loc>https://altivra.co/case-study.html?slug=quote-automation-professional-services</loc>
     <lastmod>2026-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://altivra.com/case-study.html?slug=document-processing-carbon-marketplace</loc>
+    <loc>https://altivra.co/case-study.html?slug=document-processing-carbon-marketplace</loc>
     <lastmod>2026-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -74,7 +74,7 @@
 
   <!-- Process Page -->
   <url>
-    <loc>https://altivra.com/process.html</loc>
+    <loc>https://altivra.co/process.html</loc>
     <lastmod>2026-01-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -82,14 +82,14 @@
 
   <!-- Service Pages -->
   <url>
-    <loc>https://altivra.com/services/quote-automation.html</loc>
+    <loc>https://altivra.co/services/quote-automation.html</loc>
     <lastmod>2026-01-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://altivra.com/services/document-processing.html</loc>
+    <loc>https://altivra.co/services/document-processing.html</loc>
     <lastmod>2026-01-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -97,21 +97,21 @@
 
   <!-- Location Pages -->
   <url>
-    <loc>https://altivra.com/locations/singapore.html</loc>
+    <loc>https://altivra.co/locations/singapore.html</loc>
     <lastmod>2026-01-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://altivra.com/locations/thailand.html</loc>
+    <loc>https://altivra.co/locations/thailand.html</loc>
     <lastmod>2026-01-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://altivra.com/locations/indonesia.html</loc>
+    <loc>https://altivra.co/locations/indonesia.html</loc>
     <lastmod>2026-01-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -119,14 +119,14 @@
 
   <!-- Legal Pages -->
   <url>
-    <loc>https://altivra.com/privacy.html</loc>
+    <loc>https://altivra.co/privacy.html</loc>
     <lastmod>2026-01-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
 
   <url>
-    <loc>https://altivra.com/terms.html</loc>
+    <loc>https://altivra.co/terms.html</loc>
     <lastmod>2026-01-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>

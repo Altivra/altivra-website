@@ -1,7 +1,7 @@
 // Blog System JavaScript
 // Reads from Markdown files in /posts/ directory
 
-const SITE_URL = 'https://altivra.com';
+const SITE_URL = 'https://altivra.co';
 
 let postsData = [];
 

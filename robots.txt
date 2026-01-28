@@ -1,11 +1,11 @@
 # Robots.txt for Altivra
-# https://altivra.com
+# https://altivra.co
 
 User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://altivra.com/sitemap.xml
+Sitemap: https://altivra.co/sitemap.xml
 
 # Crawl-delay (optional, for politeness)
 Crawl-delay: 1

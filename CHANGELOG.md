@@ -6,10 +6,34 @@ All notable changes to the Altivra website are documented here.
 
 ### Pending
 - Connect custom domain (altivra.co)
-- Update all URLs from altivra.com to altivra.co
 - Create og-image.jpg for social sharing
 - Add client logos to trusted-by section
-- Set up CMS (Tina.io or similar)
+- Add real product screenshots to replace placeholders
+- Complete GitHub OAuth setup for Decap CMS (see CMS-SETUP.md)
+- Connect contact form to email service (Formspree or similar)
+
+---
+
+## [1.1.0] - 2026-01-28
+
+### Changed (Best Practices Update)
+- Rewrote hero section for ICP (decision makers at service-based businesses)
+- Added product visual placeholders in hero and use cases sections
+- Moved testimonials section immediately after hero for social proof
+- Added social proof stats bar with key metrics
+- Updated "What We Do" to "What You Get" with You-centric copy
+- Updated "Who It's For" with ICP-focused messaging
+- Expanded "How It Works" from 3 to 4 steps with timeline
+- Added product screenshot placeholders in use cases
+- Updated CTA section with qualifying questions form
+- Flipped all copy from We-centric to You-centric
+- Updated all URLs from altivra.com to altivra.co
+
+### Added
+- Contact form with qualifying questions
+- Social proof stats bar (85% faster quotes, 4-8 weeks, 0 failed pilots)
+- Product visual placeholder components
+- Form handler in script.js
 
 ---
 
@@ -46,7 +70,15 @@ All notable changes to the Altivra website are documented here.
 
 ## Development Log
 
-### 2026-01-28
+### 2026-01-28 (v1.1.0)
+- Major best practices update based on B2B AI Website Best Practices audit
+- Rewrote hero with ICP focus and product visual
+- Moved social proof above fold
+- Added contact form with qualifying questions
+- Updated all copy to be You-centric
+- Updated all URLs to altivra.co domain
+
+### 2026-01-28 (v1.0.0)
 - Migrated from Netlify to Cloudflare Pages (bandwidth limits issue)
 - Converted blog from JSON to Markdown files
 - Added 404 page and _redirects
