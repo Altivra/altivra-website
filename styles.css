@@ -483,12 +483,18 @@ a {
 }
 
 .btn-primary {
-    background: var(--bg-dark);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: var(--white);
     font-weight: 600;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 20px rgba(102, 126, 234, 0.4);
     position: relative;
     overflow: hidden;
+    border: none;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+    box-shadow: 0 8px 30px rgba(102, 126, 234, 0.5);
 }
 
 .btn-primary::before {
@@ -571,7 +577,7 @@ a {
 }
 
 .logo-img {
-    height: 32px;
+    height: 40px;
     width: auto;
 }
 
@@ -1171,7 +1177,7 @@ a {
 }
 
 .footer-logo {
-    height: 28px;
+    height: 40px;
     margin-bottom: 16px;
 }
 
@@ -2079,7 +2085,10 @@ a {
     display: block;
     font-size: 3rem;
     font-weight: 700;
-    color: var(--accent-dark);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     line-height: 1;
     margin-bottom: 8px;
 }
@@ -2736,42 +2745,161 @@ a {
     margin-bottom: 32px;
 }
 
-.client-logos {
+/* Who We Serve Section */
+.who-we-serve-section {
+    padding: 60px 0;
+}
+
+.who-we-serve-grid {
     display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 48px;
+    align-items: flex-start;
+    gap: 60px;
     flex-wrap: wrap;
 }
 
-.client-logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 40px;
-    opacity: 0.6;
-    transition: var(--transition);
-    filter: grayscale(100%);
+.serve-column {
+    text-align: center;
 }
 
-.client-logo:hover {
-    opacity: 1;
-    filter: grayscale(0%);
-}
-
-.client-logo img {
-    max-height: 40px;
-    max-width: 120px;
-    object-fit: contain;
-}
-
-.client-logo span {
-    font-size: 0.85rem;
+.serve-label {
+    font-size: 0.75rem;
+    font-weight: 600;
     color: var(--text-light);
-    padding: 12px 24px;
-    background: var(--bg-card);
-    border-radius: var(--border-radius-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 16px;
+}
+
+.serve-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    max-width: 800px;
+}
+
+.past-clients-section {
+    padding: 60px 0;
+    overflow: hidden;
+}
+
+.clients-carousel {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.clients-track {
+    display: flex;
+    gap: 20px;
+    animation: scroll-clients 30s linear infinite;
+    width: max-content;
+}
+
+.clients-track:hover {
+    animation-play-state: paused;
+}
+
+.client-tag {
+    flex-shrink: 0;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #fff;
+    padding: 16px 30px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 50px;
+    box-shadow: 0 4px 20px rgba(102, 126, 234, 0.4);
+    transition: all 0.3s ease;
     white-space: nowrap;
+}
+
+.client-tag:nth-child(2),
+.client-tag:nth-child(9) {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    box-shadow: 0 4px 20px rgba(245, 87, 108, 0.4);
+}
+
+.client-tag:nth-child(3),
+.client-tag:nth-child(10) {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    box-shadow: 0 4px 20px rgba(79, 172, 254, 0.4);
+}
+
+.client-tag:nth-child(4),
+.client-tag:nth-child(11) {
+    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+    box-shadow: 0 4px 20px rgba(67, 233, 123, 0.4);
+}
+
+.client-tag:nth-child(5),
+.client-tag:nth-child(12) {
+    background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+    box-shadow: 0 4px 20px rgba(250, 112, 154, 0.4);
+}
+
+.client-tag:nth-child(6),
+.client-tag:nth-child(13) {
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    box-shadow: 0 4px 20px rgba(106, 17, 203, 0.4);
+}
+
+.client-tag:nth-child(7),
+.client-tag:nth-child(14) {
+    background: linear-gradient(135deg, #ff6a00 0%, #ee0979 100%);
+    box-shadow: 0 4px 20px rgba(238, 9, 121, 0.4);
+}
+
+.client-tag:hover {
+    transform: translateY(-4px) scale(1.05);
+    filter: brightness(1.1);
+}
+
+@keyframes scroll-clients {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.serve-tag {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    padding: 10px 20px;
+    background: var(--white);
+    border-radius: 50px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    transition: var(--transition);
+}
+
+.serve-tag:hover {
+    color: var(--text-dark);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.serve-divider {
+    width: 1px;
+    height: 80px;
+    background: var(--border-light);
+    align-self: center;
+}
+
+@media (max-width: 768px) {
+    .who-we-serve-grid {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .serve-divider {
+        width: 80px;
+        height: 1px;
+    }
 }
 
 /* Trust Badges Section */
@@ -3933,6 +4061,16 @@ a {
     background: var(--bg-main);
     border-radius: var(--border-radius-sm);
     border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.trust-badge-card:hover {
+    border-color: transparent;
+    box-shadow: 0 8px 30px rgba(102, 126, 234, 0.15);
+    background: linear-gradient(var(--bg-main), var(--bg-main)) padding-box,
+                linear-gradient(135deg, #667eea 0%, #764ba2 100%) border-box;
+    border: 2px solid transparent;
 }
 
 .trust-badge-icon-box {
@@ -3941,9 +4079,14 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(74, 222, 128, 0.1);
+    background: rgba(102, 126, 234, 0.1);
     border-radius: 12px;
     margin-bottom: 16px;
+    transition: all 0.3s ease;
+}
+
+.trust-badge-card:hover .trust-badge-icon-box {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.2) 0%, rgba(118, 75, 162, 0.2) 100%);
 }
 
 .trust-badge-card strong {
