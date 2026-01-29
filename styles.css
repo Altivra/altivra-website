@@ -3158,6 +3158,7 @@ a {
 
     .footer-social {
         justify-content: center;
+        width: 100%;
     }
 }
 
@@ -4788,5 +4789,126 @@ a {
 
     .process-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+/* ===================================
+   LEAD MAGNET POPUP
+   =================================== */
+.lead-popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    z-index: 10000;
+    align-items: center;
+    justify-content: center;
+}
+
+.lead-popup-overlay.active {
+    display: flex;
+}
+
+.lead-popup {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 48px;
+    max-width: 480px;
+    width: 90%;
+    position: relative;
+    animation: popupSlide 0.3s ease;
+}
+
+@keyframes popupSlide {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.lead-popup-close {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    color: var(--text-light);
+    cursor: pointer;
+    line-height: 1;
+}
+
+.lead-popup-close:hover {
+    color: var(--text-primary);
+}
+
+.lead-popup-label {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent-dark);
+    margin-bottom: 12px;
+}
+
+.lead-popup h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: var(--text-primary);
+}
+
+.lead-popup p {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+.lead-popup form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.lead-popup input[type="text"],
+.lead-popup input[type="email"] {
+    padding: 14px 16px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    font-family: inherit;
+    transition: border-color 0.2s;
+}
+
+.lead-popup input:focus {
+    outline: none;
+    border-color: var(--accent-dark);
+}
+
+.lead-popup button[type="submit"] {
+    width: 100%;
+    padding: 14px;
+    font-size: 1rem;
+}
+
+.lead-popup-note {
+    font-size: 0.8rem !important;
+    color: var(--text-light) !important;
+    text-align: center;
+    margin-bottom: 0 !important;
+    margin-top: 8px;
+}
+
+@media (max-width: 480px) {
+    .lead-popup {
+        padding: 32px 24px;
+    }
+
+    .lead-popup h3 {
+        font-size: 1.25rem;
     }
 }

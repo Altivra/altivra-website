@@ -848,6 +848,26 @@
         </div>
     </footer>
 
+    <!-- Lead Magnet Popup -->
+    <div class="lead-popup-overlay" id="lead-popup">
+        <div class="lead-popup">
+            <button class="lead-popup-close" id="lead-popup-close">&times;</button>
+            <div class="lead-popup-content">
+                <span class="lead-popup-label">Free Guide</span>
+                <h3>5 AI Strategies That Give You a Competitive Edge</h3>
+                <p>The same frameworks we use with our clients to identify high-impact AI opportunities and avoid common pitfalls. No fluff, just actionable strategy.</p>
+                <form id="lead-form" action="https://formspree.io/f/mvzrzryw" method="POST">
+                    <input type="hidden" name="_subject" value="Lead Magnet: Free Strategy Guide">
+                    <input type="hidden" name="source" value="lead-magnet-popup">
+                    <input type="text" name="name" placeholder="Your name" required>
+                    <input type="email" name="email" placeholder="Your work email" required>
+                    <button type="submit" class="btn btn-primary">Get the Free Guide</button>
+                </form>
+                <p class="lead-popup-note">No spam. Unsubscribe anytime.</p>
+            </div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
     <script>
         // Load testimonials dynamically

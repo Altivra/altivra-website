@@ -393,4 +393,71 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    // ===================================
+    // LEAD MAGNET POPUP
+    // ===================================
+    const leadPopup = document.getElementById('lead-popup');
+    if (leadPopup && !sessionStorage.getItem('lead-popup-shown')) {
+        const showPopup = () => {
+            if (sessionStorage.getItem('lead-popup-shown')) return;
+            sessionStorage.setItem('lead-popup-shown', 'true');
+            leadPopup.classList.add('active');
+        };
+
+        // Desktop: exit intent (mouse leaves viewport top)
+        document.addEventListener('mouseout', function(e) {
+            if (e.clientY < 10) showPopup();
+        });
+
+        // Mobile: show after scrolling 60% of page
+        let scrollTriggered = false;
+        window.addEventListener('scroll', function() {
+            if (scrollTriggered) return;
+            const scrollPercent = window.scrollY / (document.body.scrollHeight - window.innerHeight);
+            if (scrollPercent > 0.6) {
+                scrollTriggered = true;
+                showPopup();
+            }
+        });
+
+        // Fallback: show after 45 seconds
+        setTimeout(showPopup, 45000);
+
+        // Close popup
+        document.getElementById('lead-popup-close').addEventListener('click', function() {
+            leadPopup.classList.remove('active');
+        });
+
+        leadPopup.addEventListener('click', function(e) {
+            if (e.target === leadPopup) leadPopup.classList.remove('active');
+        });
+
+        // Handle form submission
+        const leadForm = document.getElementById('lead-form');
+        if (leadForm) {
+            leadForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const btn = leadForm.querySelector('button[type="submit"]');
+                btn.textContent = 'Sending...';
+                btn.disabled = true;
+
+                fetch(leadForm.action, {
+                    method: 'POST',
+                    body: new FormData(leadForm),
+                    headers: { 'Accept': 'application/json' }
+                }).then(response => {
+                    if (response.ok) {
+                        leadForm.innerHTML = '<p style="text-align:center;font-size:1.1rem;color:var(--text-primary);padding:20px 0;">Thanks! Check your email for the guide.</p>';
+                    } else {
+                        btn.textContent = 'Error — try again';
+                        btn.disabled = false;
+                    }
+                }).catch(() => {
+                    btn.textContent = 'Error — try again';
+                    btn.disabled = false;
+                });
+            });
+        }
+    }
+
 });
