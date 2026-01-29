@@ -83,7 +83,7 @@ function renderPosts(posts, container) {
 
     container.innerHTML = posts.map(post => `
         <article class="post-card" data-category="${post.category}">
-            <a href="post.html?slug=${post.slug}">
+            <a href="post.html#${post.slug}">
                 ${post.image ? `<div class="post-card-image"><img src="${post.image}" alt="${post.title}" loading="lazy"></div>` : ''}
                 <div class="post-card-content">
                     <div class="post-card-meta">
@@ -222,7 +222,7 @@ function loadRelatedPosts(currentPost) {
     }
 
     relatedContainer.innerHTML = related.map(post => `
-        <a href="post.html?slug=${post.slug}" class="related-post-card">
+        <a href="post.html#${post.slug}" class="related-post-card">
             <span class="related-post-category">${formatCategory(post.category)}</span>
             <h3>${post.title}</h3>
             <span class="related-post-read-time">${post.readTime}</span>

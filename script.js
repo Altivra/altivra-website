@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // COUNTING NUMBER ANIMATIONS
     // ===================================
 
-    function animateCounter(element, target, duration = 2000, suffix = '') {
+    function animateCounter(element, target, duration = 2000, prefix = '', suffix = '') {
         let start = 0;
         const increment = target / (duration / 16);
         const isDecimal = target % 1 !== 0;
@@ -15,25 +15,30 @@ document.addEventListener('DOMContentLoaded', function() {
         function updateCounter() {
             start += increment;
             if (start < target) {
-                element.textContent = (isDecimal ? start.toFixed(1) : Math.floor(start)) + suffix;
+                element.textContent = prefix + (isDecimal ? start.toFixed(1) : Math.floor(start)) + suffix;
                 requestAnimationFrame(updateCounter);
             } else {
-                element.textContent = target + suffix;
+                element.textContent = prefix + target + suffix;
             }
         }
         updateCounter();
     }
 
-    // Observer for counting animations
+    // Observer for counting animations - resets each time section scrolls into view
     const counterObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-            if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
-                entry.target.classList.add('counted');
-                const target = entry.target.dataset.target;
-                const suffix = entry.target.dataset.suffix || '';
+            const target = entry.target.dataset.target;
+            const suffix = entry.target.dataset.suffix || '';
+            const prefix = entry.target.dataset.prefix || '';
 
+            if (entry.isIntersecting) {
                 if (target) {
-                    animateCounter(entry.target, parseFloat(target), 2000, suffix);
+                    animateCounter(entry.target, parseFloat(target), 2000, prefix, suffix);
+                }
+            } else {
+                // Reset when scrolled out of view
+                if (target) {
+                    entry.target.textContent = prefix + '0' + suffix;
                 }
             }
         });
@@ -43,6 +48,64 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('[data-target]').forEach(counter => {
         counterObserver.observe(counter);
     });
+
+    // ===================================
+    // HERO DASHBOARD ANIMATION
+    // ===================================
+
+    function animateHeroDashboard() {
+        const quotesEl = document.getElementById('hero-quotes');
+        const timeEl = document.getElementById('hero-time');
+        const docsEl = document.getElementById('hero-docs');
+        if (!quotesEl) return;
+
+        const bars = document.querySelectorAll('.metric-bar-fill');
+        let quoteCount = 0;
+        const quoteTarget = 247;
+        const docTarget = 1832;
+        let docCount = 0;
+
+        // Animate quotes counter
+        function tickQuotes() {
+            if (quoteCount < quoteTarget) {
+                quoteCount += Math.ceil((quoteTarget - quoteCount) / 20);
+                quotesEl.textContent = quoteCount.toLocaleString();
+                requestAnimationFrame(tickQuotes);
+            } else {
+                quotesEl.textContent = quoteTarget.toLocaleString();
+            }
+        }
+
+        // Animate docs counter
+        function tickDocs() {
+            if (docCount < docTarget) {
+                docCount += Math.ceil((docTarget - docCount) / 20);
+                docsEl.textContent = docCount.toLocaleString();
+                requestAnimationFrame(tickDocs);
+            } else {
+                docsEl.textContent = docTarget.toLocaleString();
+            }
+        }
+
+        // Animate processing time
+        const times = ['1.2s', '0.8s', '1.5s', '0.9s', '1.1s'];
+        let timeIdx = 0;
+        function tickTime() {
+            timeEl.textContent = times[timeIdx % times.length];
+            timeIdx++;
+        }
+
+        // Start animations with stagger
+        setTimeout(tickQuotes, 300);
+        setTimeout(() => { tickTime(); setInterval(tickTime, 3000); }, 600);
+        setTimeout(tickDocs, 900);
+
+        // Animate bars
+        setTimeout(() => { if (bars[0]) bars[0].style.width = '78%'; }, 500);
+        setTimeout(() => { if (bars[1]) bars[1].style.width = '92%'; }, 800);
+    }
+
+    animateHeroDashboard();
 
     // ===================================
     // STAGGERED REVEAL ANIMATIONS
@@ -277,33 +340,39 @@ document.addEventListener('DOMContentLoaded', function() {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
 
-            const formData = {
-                name: document.getElementById('contact-name').value,
-                email: document.getElementById('contact-email').value,
-                company: document.getElementById('contact-company').value,
-                challenge: document.getElementById('contact-challenge').value,
-                details: document.getElementById('contact-details').value
-            };
-
             const submitBtn = contactForm.querySelector('button[type="submit"]');
             const originalText = submitBtn.textContent;
 
             submitBtn.textContent = 'Sending...';
             submitBtn.disabled = true;
 
-            setTimeout(() => {
-                submitBtn.textContent = 'Message Sent!';
-                submitBtn.style.background = '#22c55e';
-                contactForm.reset();
-
+            fetch(contactForm.action, {
+                method: 'POST',
+                body: new FormData(contactForm),
+                headers: { 'Accept': 'application/json' }
+            }).then(response => {
+                if (response.ok) {
+                    submitBtn.textContent = 'Message Sent!';
+                    submitBtn.style.background = '#22c55e';
+                    contactForm.reset();
+                } else {
+                    submitBtn.textContent = 'Error — try again';
+                    submitBtn.style.background = '#ef4444';
+                }
+                submitBtn.disabled = false;
                 setTimeout(() => {
                     submitBtn.textContent = originalText;
                     submitBtn.style.background = '';
-                    submitBtn.disabled = false;
                 }, 3000);
-            }, 1000);
-
-            console.log('Form submitted:', formData);
+            }).catch(() => {
+                submitBtn.textContent = 'Error — try again';
+                submitBtn.style.background = '#ef4444';
+                submitBtn.disabled = false;
+                setTimeout(() => {
+                    submitBtn.textContent = originalText;
+                    submitBtn.style.background = '';
+                }, 3000);
+            });
         });
     }
 
