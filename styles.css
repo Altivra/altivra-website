@@ -1780,7 +1780,8 @@ a {
     .cta-section .container,
     #faq .container,
     .blog-main .container,
-    .blog-cta .container {
+    .blog-cta .container,
+    .founder-section .container {
         padding: 40px 24px;
         border-radius: var(--border-radius-sm);
     }
@@ -1807,11 +1808,26 @@ a {
     .footer-content {
         flex-direction: column;
         gap: 32px;
+        text-align: center;
+        align-items: center;
+    }
+
+    .footer-brand {
+        text-align: center;
     }
 
     .footer-links {
         flex-wrap: wrap;
+        justify-content: center;
         gap: 16px;
+    }
+
+    .footer-social {
+        justify-content: center;
+    }
+
+    .footer-bottom {
+        text-align: center;
     }
 
     .newsletter-form {
@@ -4939,7 +4955,7 @@ a {
    MEET THE FOUNDER SECTION
    =================================== */
 .founder-section {
-    background: var(--bg-card);
+    background: var(--bg-main);
 }
 
 .founder-card {
@@ -5054,7 +5070,8 @@ a {
     .founder-card {
         flex-direction: column;
         text-align: center;
-        padding: 32px;
+        padding: 32px 24px;
+        gap: 24px;
     }
 
     .founder-photo {
@@ -5076,5 +5093,16 @@ a {
 
     .founder-linkedin {
         justify-content: center;
+    }
+
+    .process-step {
+        padding: 24px;
+        background: var(--bg-card);
+        border-radius: var(--border-radius-sm);
+        border: 1px solid var(--border-color);
+    }
+
+    .process-step-highlight {
+        border: 2px solid var(--accent);
     }
 }
