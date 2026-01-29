@@ -447,7 +447,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     headers: { 'Accept': 'application/json' }
                 }).then(response => {
                     if (response.ok) {
-                        leadForm.innerHTML = '<p style="text-align:center;font-size:1.1rem;color:var(--text-primary);padding:20px 0;">Thanks! Check your email for the guide.</p>';
+                        leadForm.innerHTML = '<div style="text-align:center;padding:20px 0;"><p style="font-size:1.1rem;color:var(--text-primary);margin-bottom:16px;">Here\'s your guide:</p><a href="/guide/ai-strategy-guide.html" target="_blank" style="display:inline-block;background:var(--accent-dark);color:#fff;padding:14px 28px;border-radius:100px;text-decoration:none;font-weight:600;">Download the Guide</a></div>';
                     } else {
                         btn.textContent = 'Error — try again';
                         btn.disabled = false;
