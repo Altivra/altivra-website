@@ -4123,11 +4123,8 @@ a {
 }
 
 .trust-badge-card:hover {
-    border-color: transparent;
-    box-shadow: 0 8px 30px rgba(102, 126, 234, 0.15);
-    background: linear-gradient(var(--bg-main), var(--bg-main)) padding-box,
-                linear-gradient(135deg, #667eea 0%, #764ba2 100%) border-box;
-    border: 2px solid transparent;
+    border-color: var(--accent);
+    box-shadow: 0 8px 30px rgba(74, 222, 128, 0.15);
 }
 
 .trust-badge-icon-box {
@@ -4136,14 +4133,14 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(102, 126, 234, 0.1);
+    background: rgba(74, 222, 128, 0.1);
     border-radius: 12px;
     margin-bottom: 16px;
     transition: all 0.3s ease;
 }
 
 .trust-badge-card:hover .trust-badge-icon-box {
-    background: linear-gradient(135deg, rgba(102, 126, 234, 0.2) 0%, rgba(118, 75, 162, 0.2) 100%);
+    background: rgba(74, 222, 128, 0.2);
 }
 
 .trust-badge-card strong {
