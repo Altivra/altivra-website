@@ -5,12 +5,80 @@ All notable changes to the Altivra website are documented here.
 ## [Unreleased]
 
 ### Pending
-- Connect custom domain (altivra.co)
 - Create og-image.jpg for social sharing
-- Add client logos to trusted-by section
 - Add real product screenshots to replace placeholders
-- Complete GitHub OAuth setup for Decap CMS (see CMS-SETUP.md)
-- Connect contact form to email service (Formspree or similar)
+- Submit sitemap to Google Search Console
+- Request re-indexing of key pages in Search Console
+
+---
+
+## [1.4.0] - 2026-01-31
+
+### Fixed
+- Mobile layout: founder section container padding, process step alignment, footer centering
+- Off-brand purple gradient on trust badge hover replaced with green accent (#4ade80)
+- Trust badge icon box background changed from purple to green
+
+---
+
+## [1.3.0] - 2026-01-30
+
+### Added
+- Meet the Founder section with card layout, photo, credentials, and LinkedIn link
+- 4 new detailed industry case studies: Logistics & Freight, Insurance, Real Estate, Education
+- Each case study includes TL;DR section for quick scanning
+- AI Strategy Guide page (`/guide/ai-strategy-guide.html`) with 5 strategies
+- Country flag images from flagcdn.com (replacing broken emoji flags on Windows)
+- `serve.json` for local dev with `cleanUrls: false`
+
+### Changed
+- Replaced Speaking & Thought Leadership section with Meet the Founder
+- Nav CTA changed from "Book a Call" to "Free Strategy Call" across all 14 pages
+- Company LinkedIn updated to `/company/altivra-ai/` across all pages
+- Blog and case study routing switched from query params (`?slug=`) to hash routing (`#slug`)
+- Case study result tags changed from dark pills to light grey badges
+- About page: "The Team" renamed to "Leadership" with subtitle
+- Removed "10+ years in operations" credential
+- "Sound Familiar?" changed from small label to proper h2 heading
+- Problem icons increased from 2rem to 3rem
+
+### Fixed
+- UTF-8 double-encoding issues (em dashes, arrows, emojis) across all pages
+- Blog and case study pages not loading due to serve package stripping query params
+- LinkedIn button styling on about page (overrode base circle styles)
+- Broken flag emojis on Windows replaced with flag images
+- case-study.html testimonial em dash encoding (switched to innerHTML with &mdash;)
+- Contact form connected to Formspree backend
+
+### Removed
+- Lead magnet exit-intent popup (HTML removed, CSS/JS remnants to clean up)
+- Old Speaking & Thought Leadership section
+
+### Deployment
+- Deployed to Cloudflare Pages with custom domain altivra.co
+- Migrated DNS from Squarespace/GoDaddy nameservers to Cloudflare
+
+---
+
+## [1.2.0] - 2026-01-29
+
+### Changed (UI Overhaul)
+- Replaced "Industries We Serve" / "Who We Work With" with animated Past Clients carousel
+- Primary CTA buttons now use purple-violet gradient with glowing shadows
+- Stat numbers use gradient text for visual emphasis
+- Trust badge cards now have gradient border hover effects
+- Reduced nav logo from 80px to 40px
+
+### Added
+- Infinite-scrolling Past Clients carousel with 7 anonymised client descriptions
+- Each client tag has unique gradient color to represent industry diversity
+- Pause-on-hover and fade-edge effects on carousel
+- Hover lift and brightness effects on client tags
+
+### Design System
+- Introduced purple-violet gradient (`#667eea` → `#764ba2`) as primary accent (later replaced with green)
+- 7 distinct gradient palettes for client tags (purple, pink, blue, green, coral, deep-purple, orange)
+- Consistent gradient shadows and hover states across buttons, stats, and cards
 
 ---
 
@@ -70,6 +138,29 @@ All notable changes to the Altivra website are documented here.
 
 ## Development Log
 
+### 2026-01-31 (v1.4.0)
+- Fixed mobile layout: founder section, process steps, footer alignment
+- Replaced off-brand purple trust badge hover with green accent
+
+### 2026-01-30 (v1.3.0)
+- Added Meet the Founder section replacing Speaking section
+- Added 4 new industry case studies (logistics, insurance, real estate, education)
+- Created AI strategy guide page
+- Fixed all UTF-8 encoding issues (em dashes, arrows, emojis)
+- Switched blog/case study routing from query params to hash routing
+- Updated nav CTA to "Free Strategy Call" and LinkedIn to /company/altivra-ai/
+- Deployed to Cloudflare Pages with custom domain altivra.co
+- Connected contact form to Formspree
+- Added country flag images replacing broken emoji flags
+- Added/removed lead magnet popup
+
+### 2026-01-29 (v1.2.0)
+- UI overhaul: added gradient design system across site
+- Replaced static industry/client-type tags with animated Past Clients carousel
+- Each client shows anonymised description (industry, revenue/team size, results)
+- Updated CTA buttons, stat numbers, and trust badges with gradient accents
+- Reduced logo size for cleaner navigation
+
 ### 2026-01-28 (v1.1.0)
 - Major best practices update based on B2B AI Website Best Practices audit
 - Rewrote hero with ICP focus and product visual
@@ -109,6 +200,10 @@ All notable changes to the Altivra website are documented here.
 
 | Version | Date | Description |
 |---------|------|-------------|
+| 1.4.0 | 2026-01-31 | Mobile layout fixes, remove off-brand purple |
+| 1.3.0 | 2026-01-30 | Founder section, 4 case studies, Cloudflare deploy, encoding fixes |
+| 1.2.0 | 2026-01-29 | Gradient UI overhaul and Past Clients carousel |
+| 1.1.0 | 2026-01-28 | Best practices update (ICP copy, social proof) |
 | 1.0.0 | 2026-01-28 | Initial launch on Cloudflare Pages |
 
 ---

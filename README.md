@@ -4,7 +4,7 @@ Custom AI systems for revenue and operations.
 
 ## Live URLs
 
-- **Production:** https://altivra.co (pending migration)
+- **Production:** https://altivra.co
 - **Staging:** https://altivra-website.pages.dev
 
 ## Tech Stack
@@ -12,7 +12,8 @@ Custom AI systems for revenue and operations.
 - **Hosting:** Cloudflare Pages
 - **Frontend:** Static HTML, CSS, JavaScript
 - **Blog:** Markdown files with client-side rendering (marked.js)
-- **CMS:** TBD (considering Tina.io)
+- **Forms:** Formspree
+- **Testing:** Playwright
 
 ## Project Structure
 
@@ -27,6 +28,9 @@ Custom AI systems for revenue and operations.
 ├── privacy.html            # Privacy policy
 ├── terms.html              # Terms of service
 ├── 404.html                # Error page
+│
+├── guide/                  # Lead magnet content
+│   └── ai-strategy-guide.html
 │
 ├── services/               # Service landing pages
 │   ├── quote-automation.html
@@ -54,22 +58,32 @@ Custom AI systems for revenue and operations.
 ├── robots.txt              # Search engine directives
 ├── feed.xml                # RSS feed
 ├── _redirects              # Cloudflare/Netlify redirects
-│
-└── admin/                  # CMS admin (Netlify CMS - legacy)
-    └── config.yml
+└── serve.json              # Local dev server config
 ```
 
 ## Local Development
 
-1. Start local server:
+1. Install dependencies:
    ```bash
-   cd "new website"
-   python -m http.server 8000
+   npm install
    ```
 
-2. Open http://localhost:8000
+2. Start local server:
+   ```bash
+   npm run serve
+   ```
 
-3. Make changes and refresh browser to preview
+3. Open http://localhost:3000
+
+4. Make changes and refresh browser to preview
+
+### Testing
+
+```bash
+npm test                # Run Playwright tests
+npm run test:headed     # Run with browser visible
+npm run test:ui         # Interactive UI mode
+```
 
 ## Deployment
 
