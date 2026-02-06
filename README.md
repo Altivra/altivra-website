@@ -1,11 +1,11 @@
-# Altivra Website
+# 41 Labs Website
 
 Custom AI systems for revenue and operations.
 
 ## Live URLs
 
-- **Production:** https://altivra.co
-- **Staging:** https://altivra-website.pages.dev
+- **Production:** https://41labs.ai
+- **Staging:** https://41labs-website.pages.dev
 
 ## Tech Stack
 
@@ -132,5 +132,5 @@ Cloudflare Pages will automatically deploy within ~1 minute.
 
 ## Contact
 
-- Email: alexander@altivra.co
-- Website: https://altivra.co
+- Email: alexander@41labs.ai
+- Website: https://41labs.ai

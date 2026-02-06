@@ -1,7 +1,7 @@
 // Blog System JavaScript
 // Reads from Markdown files in /posts/ directory
 
-const SITE_URL = 'https://altivra.co';
+const SITE_URL = 'https://41labs.ai';
 
 let postsData = [];
 
@@ -144,7 +144,7 @@ async function loadPost(slug) {
 
     // Update SEO meta tags
     const pageUrl = `${SITE_URL}/post.html?slug=${slug}`;
-    document.getElementById('page-title').textContent = `${fullPost.title} | Altivra Blog`;
+    document.getElementById('page-title').textContent = `${fullPost.title} | 41 Labs Blog`;
     document.getElementById('meta-description').content = fullPost.excerpt;
     document.getElementById('canonical-url').href = pageUrl;
 
@@ -174,7 +174,7 @@ async function loadPost(slug) {
         },
         "publisher": {
             "@type": "Organization",
-            "name": "Altivra",
+            "name": "41 Labs",
             "logo": {
                 "@type": "ImageObject",
                 "url": `${SITE_URL}/logo-full.png`

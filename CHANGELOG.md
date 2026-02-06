@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to the Altivra website are documented here.
+All notable changes to the 41 Labs website are documented here.
 
 ## [Unreleased]
 
@@ -9,6 +9,27 @@ All notable changes to the Altivra website are documented here.
 - Add real product screenshots to replace placeholders
 - Submit sitemap to Google Search Console
 - Request re-indexing of key pages in Search Console
+
+---
+
+## [2.0.0] - 2026-02-06
+
+### Changed (Complete Rebrand)
+- Rebranded from "Altivra" to "41 Labs" across all pages and files
+- Changed domain from altivra.co to 41labs.ai
+- Updated email from alexander@altivra.co to alexander@41labs.ai
+- Updated LinkedIn URL from /company/altivra-ai to /company/fortyonelabs
+- Updated GitHub repository references to 41Labs/41labs-website
+- Replaced logo files with new 41 Labs branding
+
+### Updated Files
+- All 14+ HTML pages (brand name, domain, email, LinkedIn)
+- sitemap.xml, robots.txt, feed.xml (URLs)
+- package.json, admin/config.yml (repository references)
+- blog.js, script.js, styles.css (comments and brand references)
+- testimonials.json, posts.json (brand mentions)
+- CMS-SETUP.md, README.md (documentation)
+- Test files (brand assertions)
 
 ---
 

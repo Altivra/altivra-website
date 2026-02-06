@@ -1,4 +1,4 @@
-// Altivra Landing Page JavaScript
+// 41 Labs Landing Page JavaScript
 // Premium animations and interactions
 
 document.addEventListener('DOMContentLoaded', function() {

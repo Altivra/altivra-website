@@ -4,22 +4,22 @@
      xmlns:content="http://purl.org/rss/1.0/modules/content/"
      xmlns:dc="http://purl.org/dc/elements/1.1/">
   <channel>
-    <title>Altivra Blog</title>
-    <link>https://altivra.co/blog.html</link>
+    <title>41 Labs Blog</title>
+    <link>https://41labs.ai/blog.html</link>
     <description>Practical insights on AI systems, automation, and operational efficiency for B2B businesses in Southeast Asia.</description>
     <language>en-us</language>
     <lastBuildDate>Tue, 28 Jan 2026 00:00:00 GMT</lastBuildDate>
-    <atom:link href="https://altivra.co/feed.xml" rel="self" type="application/rss+xml"/>
+    <atom:link href="https://41labs.ai/feed.xml" rel="self" type="application/rss+xml"/>
     <image>
-      <url>https://altivra.co/logo-full.png</url>
-      <title>Altivra Blog</title>
-      <link>https://altivra.co</link>
+      <url>https://41labs.ai/logo-full.png</url>
+      <title>41 Labs Blog</title>
+      <link>https://41labs.ai</link>
     </image>
 
     <item>
       <title>AI Automation in Southeast Asia: 2026 Trends and Opportunities</title>
-      <link>https://altivra.co/post.html?slug=ai-automation-southeast-asia-2026-trends</link>
-      <guid isPermaLink="true">https://altivra.co/post.html?slug=ai-automation-southeast-asia-2026-trends</guid>
+      <link>https://41labs.ai/post.html?slug=ai-automation-southeast-asia-2026-trends</link>
+      <guid isPermaLink="true">https://41labs.ai/post.html?slug=ai-automation-southeast-asia-2026-trends</guid>
       <pubDate>Tue, 28 Jan 2026 00:00:00 GMT</pubDate>
       <dc:creator>Alexander Lee</dc:creator>
       <category>AI Systems</category>
@@ -28,8 +28,8 @@
 
     <item>
       <title>How to Choose an AI Vendor: A Practical Guide for Business Leaders</title>
-      <link>https://altivra.co/post.html?slug=how-to-choose-ai-vendor-guide</link>
-      <guid isPermaLink="true">https://altivra.co/post.html?slug=how-to-choose-ai-vendor-guide</guid>
+      <link>https://41labs.ai/post.html?slug=how-to-choose-ai-vendor-guide</link>
+      <guid isPermaLink="true">https://41labs.ai/post.html?slug=how-to-choose-ai-vendor-guide</guid>
       <pubDate>Mon, 27 Jan 2026 00:00:00 GMT</pubDate>
       <dc:creator>Alexander Lee</dc:creator>
       <category>Insights</category>
@@ -38,8 +38,8 @@
 
     <item>
       <title>The ROI of AI Automation: Real Numbers from Real Projects</title>
-      <link>https://altivra.co/post.html?slug=ai-automation-roi-real-numbers</link>
-      <guid isPermaLink="true">https://altivra.co/post.html?slug=ai-automation-roi-real-numbers</guid>
+      <link>https://41labs.ai/post.html?slug=ai-automation-roi-real-numbers</link>
+      <guid isPermaLink="true">https://41labs.ai/post.html?slug=ai-automation-roi-real-numbers</guid>
       <pubDate>Sun, 26 Jan 2026 00:00:00 GMT</pubDate>
       <dc:creator>Alexander Lee</dc:creator>
       <category>Case Studies</category>
@@ -48,8 +48,8 @@
 
     <item>
       <title>Why Generic AI Tools Fail Complex Businesses</title>
-      <link>https://altivra.co/post.html?slug=why-generic-ai-fails-complex-businesses</link>
-      <guid isPermaLink="true">https://altivra.co/post.html?slug=why-generic-ai-fails-complex-businesses</guid>
+      <link>https://41labs.ai/post.html?slug=why-generic-ai-fails-complex-businesses</link>
+      <guid isPermaLink="true">https://41labs.ai/post.html?slug=why-generic-ai-fails-complex-businesses</guid>
       <pubDate>Sat, 25 Jan 2026 00:00:00 GMT</pubDate>
       <dc:creator>Alexander Lee</dc:creator>
       <category>AI Systems</category>
@@ -58,8 +58,8 @@
 
     <item>
       <title>From Hours to Minutes: Automating Quote Generation with AI</title>
-      <link>https://altivra.co/post.html?slug=from-hours-to-minutes-quote-generation</link>
-      <guid isPermaLink="true">https://altivra.co/post.html?slug=from-hours-to-minutes-quote-generation</guid>
+      <link>https://41labs.ai/post.html?slug=from-hours-to-minutes-quote-generation</link>
+      <guid isPermaLink="true">https://41labs.ai/post.html?slug=from-hours-to-minutes-quote-generation</guid>
       <pubDate>Mon, 20 Jan 2026 00:00:00 GMT</pubDate>
       <dc:creator>Alexander Lee</dc:creator>
       <category>Case Studies</category>
@@ -68,8 +68,8 @@
 
     <item>
       <title>Is Your Business Ready for AI? A Practical Checklist for Operations Leaders</title>
-      <link>https://altivra.co/post.html?slug=ai-readiness-checklist-for-operations</link>
-      <guid isPermaLink="true">https://altivra.co/post.html?slug=ai-readiness-checklist-for-operations</guid>
+      <link>https://41labs.ai/post.html?slug=ai-readiness-checklist-for-operations</link>
+      <guid isPermaLink="true">https://41labs.ai/post.html?slug=ai-readiness-checklist-for-operations</guid>
       <pubDate>Wed, 15 Jan 2026 00:00:00 GMT</pubDate>
       <dc:creator>Alexander Lee</dc:creator>
       <category>Insights</category>
@@ -78,8 +78,8 @@
 
     <item>
       <title>5 Signs Your Business Needs AI Automation (And 3 Signs It Doesn't)</title>
-      <link>https://altivra.co/post.html?slug=signs-business-needs-ai-automation</link>
-      <guid isPermaLink="true">https://altivra.co/post.html?slug=signs-business-needs-ai-automation</guid>
+      <link>https://41labs.ai/post.html?slug=signs-business-needs-ai-automation</link>
+      <guid isPermaLink="true">https://41labs.ai/post.html?slug=signs-business-needs-ai-automation</guid>
       <pubDate>Fri, 10 Jan 2026 00:00:00 GMT</pubDate>
       <dc:creator>Alexander Lee</dc:creator>
       <category>Insights</category>

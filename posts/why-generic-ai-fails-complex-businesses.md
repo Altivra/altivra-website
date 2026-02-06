@@ -43,4 +43,4 @@ The businesses seeing real ROI from AI aren't using off-the-shelf tools. They're
 
 If your business deals with complexity — complex products, complex data, complex decisions — generic AI won't cut it. You need AI that's built for your specific reality.
 
-That's what we build at Altivra. Not impressive demos, but production systems your team uses daily.
+That's what we build at 41 Labs. Not impressive demos, but production systems your team uses daily.

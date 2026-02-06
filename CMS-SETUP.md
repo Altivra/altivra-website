@@ -1,6 +1,6 @@
 # Decap CMS Setup Guide
 
-This guide will help you complete the Decap CMS setup for editing content on your Altivra website.
+This guide will help you complete the Decap CMS setup for editing content on your 41 Labs website.
 
 ## Overview
 
@@ -17,16 +17,16 @@ Decap CMS (formerly Netlify CMS) provides a visual editor for:
 1. Go to GitHub: **Settings → Developer settings → OAuth Apps**
 2. Click **"New OAuth App"**
 3. Fill in the details:
-   - **Application name**: `Altivra CMS`
-   - **Homepage URL**: `https://altivra-website.pages.dev` (or your custom domain)
-   - **Authorization callback URL**: `https://altivra-website.pages.dev/api/auth`
+   - **Application name**: `41 Labs CMS`
+   - **Homepage URL**: `https://41labs-website.pages.dev` (or your custom domain)
+   - **Authorization callback URL**: `https://41labs-website.pages.dev/api/auth`
 4. Click **"Register application"**
 5. Copy the **Client ID**
 6. Click **"Generate a new client secret"** and copy the **Client Secret**
 
 ### Step 2: Add Environment Variables to Cloudflare
 
-1. Go to **Cloudflare Dashboard → Pages → altivra-website**
+1. Go to **Cloudflare Dashboard → Pages → 41labs-website**
 2. Click **Settings → Environment variables**
 3. Add these variables (for both Production and Preview):
 
@@ -44,7 +44,7 @@ Edit `admin/config.yml` and update the repo line:
 ```yaml
 backend:
   name: github
-  repo: YOUR_GITHUB_USERNAME/YOUR_REPO_NAME  # e.g., alexanderlee/altivra-website
+  repo: YOUR_GITHUB_USERNAME/YOUR_REPO_NAME  # e.g., alexanderlee/41labs-website
   branch: main
 ```
 
@@ -62,7 +62,7 @@ Cloudflare Pages will automatically deploy.
 
 ### Step 5: Access the CMS
 
-1. Go to `https://altivra-website.pages.dev/admin/`
+1. Go to `https://41labs-website.pages.dev/admin/`
 2. Click **"Login with GitHub"**
 3. Authorize the app
 4. Start editing!
