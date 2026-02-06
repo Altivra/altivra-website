@@ -1,6 +1,39 @@
 {
   "posts": [
     {
+      "title": "What Is AI Quote Automation? A Complete Guide for B2B Companies",
+      "slug": "what-is-ai-quote-automation",
+      "date": "2026-02-06",
+      "author": "Alexander Lee",
+      "category": "insights",
+      "image": "",
+      "excerpt": "AI quote automation uses artificial intelligence to generate accurate quotes in minutes instead of hours. Learn how it works, who it's for, and what results to expect.",
+      "readTime": "5 min read",
+      "keywords": ["AI quote automation", "automated quoting", "quote generation software", "CPQ AI", "B2B automation"]
+    },
+    {
+      "title": "How Much Does Custom AI Cost? Pricing Guide for B2B Companies",
+      "slug": "how-much-does-custom-ai-cost",
+      "date": "2026-02-05",
+      "author": "Alexander Lee",
+      "category": "insights",
+      "image": "",
+      "excerpt": "Custom AI projects typically cost $15,000-$150,000 depending on complexity. Here's a detailed breakdown of what drives AI pricing and how to budget for your project.",
+      "readTime": "6 min read",
+      "keywords": ["custom AI cost", "AI pricing", "AI implementation cost", "enterprise AI budget", "AI consulting rates"]
+    },
+    {
+      "title": "Custom AI vs ChatGPT for Business: When to Use Each",
+      "slug": "custom-ai-vs-chatgpt-for-business",
+      "date": "2026-02-04",
+      "author": "Alexander Lee",
+      "category": "insights",
+      "image": "",
+      "excerpt": "ChatGPT is great for general tasks, but custom AI delivers 10x better results for specific business processes. Here's when to use each and why.",
+      "readTime": "5 min read",
+      "keywords": ["custom AI vs ChatGPT", "ChatGPT for business", "enterprise AI", "when to use ChatGPT", "custom AI benefits"]
+    },
+    {
       "title": "AI Automation in Southeast Asia: 2026 Trends and Opportunities",
       "slug": "ai-automation-southeast-asia-2026-trends",
       "date": "2026-01-28",
