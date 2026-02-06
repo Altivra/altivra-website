@@ -576,9 +576,12 @@ a {
     align-items: center;
 }
 
+.navbar .logo img.logo-img,
 .logo-img {
-    height: 40px;
-    width: auto;
+    height: 60px !important;
+    width: auto !important;
+    max-height: none !important;
+    display: block;
 }
 
 .nav-links {
@@ -1177,7 +1180,7 @@ a {
 }
 
 .footer-logo {
-    height: 40px;
+    height: 48px;
     margin-bottom: 16px;
 }
 
@@ -5102,4 +5105,21 @@ a {
     .process-step-highlight {
         border: 2px solid var(--accent);
     }
+}
+
+/* ======================
+   FORCE LOGO SIZE - NUCLEAR OVERRIDE
+   ====================== */
+.logo-img,
+img.logo-img,
+.logo img,
+.navbar .logo img,
+.navbar .logo-img,
+.nav-container .logo img {
+    height: 60px !important;
+    width: auto !important;
+    max-height: none !important;
+    min-height: 60px !important;
+    max-width: none !important;
+    object-fit: contain !important;
 }
