@@ -1,14 +1,71 @@
 # Robots.txt for 41 Labs
 # https://41labs.ai
 
-User-agent: *
+# ===========================================
+# IMPORTANT: AI Crawlers - EXPLICITLY ALLOWED
+# We want to appear in AI search results (ChatGPT, Perplexity, Gemini, Claude)
+# These explicit Allow rules override any block rules
+# ===========================================
+
+# OpenAI's GPTBot (ChatGPT, Bing AI)
+User-agent: GPTBot
 Allow: /
 
-# Sitemaps
-Sitemap: https://41labs.ai/sitemap.xml
+# Anthropic's ClaudeBot
+User-agent: ClaudeBot
+Allow: /
 
-# Crawl-delay (optional, for politeness)
+# Google's AI training bot (Gemini, Bard)
+User-agent: Google-Extended
+Allow: /
+
+# Perplexity AI
+User-agent: PerplexityBot
+Allow: /
+
+# Common Crawl (used by many AI systems)
+User-agent: CCBot
+Allow: /
+
+# Amazon's bot (Alexa, AWS AI)
+User-agent: Amazonbot
+Allow: /
+
+# Apple's extended bot (Apple Intelligence)
+User-agent: Applebot-Extended
+Allow: /
+
+# ByteDance's bot
+User-agent: Bytespider
+Allow: /
+
+# Meta's AI training bot
+User-agent: meta-externalagent
+Allow: /
+
+# Cohere AI
+User-agent: cohere-ai
+Allow: /
+
+# You.com AI
+User-agent: YouBot
+Allow: /
+
+# ===========================================
+# Standard Search Engines
+# ===========================================
+
+# All other crawlers
+User-agent: *
+Allow: /
 Crawl-delay: 1
 
-# Disallow admin areas
+# Disallow admin areas (if any)
 Disallow: /admin/
+Disallow: /.git/
+Disallow: /node_modules/
+
+# ===========================================
+# Sitemaps
+# ===========================================
+Sitemap: https://41labs.ai/sitemap.xml
