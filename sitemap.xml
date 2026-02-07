@@ -78,6 +78,48 @@
     <priority>0.8</priority>
   </url>
 
+  <url>
+    <loc>https://41labs.ai/post.html?slug=when-should-business-invest-in-ai</loc>
+    <lastmod>2026-02-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://41labs.ai/post.html?slug=what-is-intelligent-document-processing</loc>
+    <lastmod>2026-02-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://41labs.ai/post.html?slug=ai-implementation-timeline</loc>
+    <lastmod>2026-02-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://41labs.ai/post.html?slug=ai-roi-calculator-guide</loc>
+    <lastmod>2026-02-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://41labs.ai/post.html?slug=is-your-business-ai-ready</loc>
+    <lastmod>2026-02-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://41labs.ai/post.html?slug=ai-for-small-business-guide</loc>
+    <lastmod>2026-02-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Case Studies -->
   <url>
     <loc>https://41labs.ai/case-study.html?slug=quote-automation-professional-services</loc>
@@ -132,14 +174,14 @@
   <!-- Service Pages -->
   <url>
     <loc>https://41labs.ai/services/quote-automation.html</loc>
-    <lastmod>2026-01-28</lastmod>
+    <lastmod>2026-02-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://41labs.ai/services/document-processing.html</loc>
-    <lastmod>2026-01-28</lastmod>
+    <lastmod>2026-02-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>

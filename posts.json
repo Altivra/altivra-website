@@ -1,6 +1,72 @@
 {
   "posts": [
     {
+      "title": "When Should a Business Invest in AI Automation? 7 Signs You're Ready",
+      "slug": "when-should-business-invest-in-ai",
+      "date": "2026-02-07",
+      "author": "Alexander Lee",
+      "category": "insights",
+      "image": "",
+      "excerpt": "Not every business needs AI right now. Here are 7 clear signs that indicate your company is ready to benefit from AI automation — and when to wait.",
+      "readTime": "6 min read",
+      "keywords": ["when to invest in AI", "AI automation ROI", "AI investment timing", "business AI readiness", "AI decision making"]
+    },
+    {
+      "title": "What Is Intelligent Document Processing (IDP)? Complete Guide",
+      "slug": "what-is-intelligent-document-processing",
+      "date": "2026-02-07",
+      "author": "Alexander Lee",
+      "category": "insights",
+      "image": "",
+      "excerpt": "Intelligent Document Processing uses AI to extract, classify, and validate data from documents automatically. Here's how IDP works, what it costs, and whether your business needs it.",
+      "readTime": "7 min read",
+      "keywords": ["intelligent document processing", "IDP", "document AI", "AI document extraction", "automated document processing", "OCR AI"]
+    },
+    {
+      "title": "AI Implementation Timeline: What to Expect from Start to Deployment",
+      "slug": "ai-implementation-timeline",
+      "date": "2026-02-07",
+      "author": "Alexander Lee",
+      "category": "insights",
+      "image": "",
+      "excerpt": "Custom AI projects typically take 6-16 weeks from kickoff to production. Here's a detailed breakdown of each phase and what happens at every stage.",
+      "readTime": "5 min read",
+      "keywords": ["AI implementation timeline", "how long does AI take", "AI project phases", "AI deployment timeline", "AI development process"]
+    },
+    {
+      "title": "AI ROI Calculator: How to Measure and Predict AI Automation Returns",
+      "slug": "ai-roi-calculator-guide",
+      "date": "2026-02-07",
+      "author": "Alexander Lee",
+      "category": "insights",
+      "image": "",
+      "excerpt": "Calculate the real ROI of AI automation before you invest. This guide provides formulas, benchmarks, and a framework for building your AI business case.",
+      "readTime": "7 min read",
+      "keywords": ["AI ROI calculator", "AI automation ROI", "AI business case", "AI investment return", "measure AI success", "AI cost savings"]
+    },
+    {
+      "title": "Is Your Business AI-Ready? 10-Point Assessment Checklist",
+      "slug": "is-your-business-ai-ready",
+      "date": "2026-02-07",
+      "author": "Alexander Lee",
+      "category": "insights",
+      "image": "",
+      "excerpt": "Take this 10-point assessment to determine if your business is ready for AI automation. Score yourself and get specific recommendations based on your results.",
+      "readTime": "5 min read",
+      "keywords": ["AI readiness assessment", "is my business ready for AI", "AI automation checklist", "AI prerequisites", "business AI evaluation"]
+    },
+    {
+      "title": "AI for Small Business: What SMBs Need to Know Before Investing",
+      "slug": "ai-for-small-business-guide",
+      "date": "2026-02-07",
+      "author": "Alexander Lee",
+      "category": "insights",
+      "image": "",
+      "excerpt": "AI isn't just for enterprises anymore. Here's what small and medium businesses need to know about AI automation — costs, use cases, and how to start without breaking the budget.",
+      "readTime": "6 min read",
+      "keywords": ["AI for small business", "SMB AI automation", "affordable AI solutions", "small business automation", "AI on a budget"]
+    },
+    {
       "title": "What Is AI Quote Automation? A Complete Guide for B2B Companies",
       "slug": "what-is-ai-quote-automation",
       "date": "2026-02-06",
