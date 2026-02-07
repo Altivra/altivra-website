@@ -1,6 +1,96 @@
 {
   "posts": [
     {
+      "slug": "when-should-business-invest-in-ai",
+      "title": "When Should a Business Invest in AI Automation? 7 Signs You're Ready",
+      "date": "2026-02-07",
+      "author": "Alexander Lee",
+      "category": "insights",
+      "excerpt": "Not every business needs AI right now. Here are 7 clear signs that indicate your company is ready to benefit from AI automation — and when to wait.",
+      "readTime": "6 min read",
+      "image": ""
+    },
+    {
+      "slug": "what-is-intelligent-document-processing",
+      "title": "What Is Intelligent Document Processing (IDP)? Complete Guide",
+      "date": "2026-02-07",
+      "author": "Alexander Lee",
+      "category": "insights",
+      "excerpt": "Intelligent Document Processing uses AI to extract, classify, and validate data from documents automatically. Here's how IDP works, what it costs, and whether your business needs it.",
+      "readTime": "7 min read",
+      "image": ""
+    },
+    {
+      "slug": "ai-implementation-timeline",
+      "title": "AI Implementation Timeline: What to Expect from Start to Deployment",
+      "date": "2026-02-07",
+      "author": "Alexander Lee",
+      "category": "insights",
+      "excerpt": "Custom AI projects typically take 6-16 weeks from kickoff to production. Here's a detailed breakdown of each phase and what happens at every stage.",
+      "readTime": "5 min read",
+      "image": ""
+    },
+    {
+      "slug": "ai-roi-calculator-guide",
+      "title": "AI ROI Calculator: How to Measure and Predict AI Automation Returns",
+      "date": "2026-02-07",
+      "author": "Alexander Lee",
+      "category": "insights",
+      "excerpt": "Calculate the real ROI of AI automation before you invest. This guide provides formulas, benchmarks, and a framework for building your AI business case.",
+      "readTime": "7 min read",
+      "image": ""
+    },
+    {
+      "slug": "is-your-business-ai-ready",
+      "title": "Is Your Business AI-Ready? 10-Point Assessment Checklist",
+      "date": "2026-02-07",
+      "author": "Alexander Lee",
+      "category": "insights",
+      "excerpt": "Take this 10-point assessment to determine if your business is ready for AI automation. Score yourself and get specific recommendations based on your results.",
+      "readTime": "5 min read",
+      "image": ""
+    },
+    {
+      "slug": "ai-for-small-business-guide",
+      "title": "AI for Small Business: What SMBs Need to Know Before Investing",
+      "date": "2026-02-07",
+      "author": "Alexander Lee",
+      "category": "insights",
+      "excerpt": "AI isn't just for enterprises anymore. Here's what small and medium businesses need to know about AI automation — costs, use cases, and how to start without breaking the budget.",
+      "readTime": "6 min read",
+      "image": ""
+    },
+    {
+      "slug": "what-is-ai-quote-automation",
+      "title": "What Is AI Quote Automation? A Complete Guide for B2B Companies",
+      "date": "2026-02-06",
+      "author": "Alexander Lee",
+      "category": "insights",
+      "excerpt": "AI quote automation uses artificial intelligence to generate accurate quotes in minutes instead of hours. Learn how it works, who it's for, and what results to expect.",
+      "readTime": "5 min read",
+      "image": ""
+    },
+    {
+      "slug": "how-much-does-custom-ai-cost",
+      "title": "How Much Does Custom AI Cost? Pricing Guide for B2B Companies",
+      "date": "2026-02-05",
+      "author": "Alexander Lee",
+      "category": "insights",
+      "excerpt": "Custom AI projects typically cost $15,000-$150,000 depending on complexity. Here's a detailed breakdown of what drives AI pricing and how to budget for your project.",
+      "readTime": "6 min read",
+      "image": ""
+    },
+    {
+      "slug": "custom-ai-vs-chatgpt-for-business",
+      "title": "Custom AI vs ChatGPT for Business: When to Use Each",
+      "date": "2026-02-04",
+      "author": "Alexander Lee",
+      "category": "insights",
+      "excerpt": "ChatGPT is great for general tasks, but custom AI delivers 10x better results for specific business processes. Here's when to use each and why.",
+      "readTime": "5 min read",
+      "image": ""
+    },
+    {
       "slug": "ai-automation-southeast-asia-2026-trends",
       "title": "AI Automation in Southeast Asia: 2026 Trends and Opportunities",
       "date": "2026-01-28",
