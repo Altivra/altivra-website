@@ -1,6 +1,19 @@
 [build]
   publish = "."
 
+# Redirect old domain to new domain (301 permanent)
+[[redirects]]
+  from = "https://altivra.co/*"
+  to = "https://41labs.ai/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.altivra.co/*"
+  to = "https://41labs.ai/:splat"
+  status = 301
+  force = true
+
 # Redirect for clean URLs (optional)
 [[redirects]]
   from = "/blog/*"

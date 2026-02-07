@@ -1,4 +1,8 @@
 # Netlify redirects
 
+# Redirect old domain to new domain (301 permanent)
+https://altivra.co/*  https://41labs.ai/:splat  301!
+https://www.altivra.co/*  https://41labs.ai/:splat  301!
+
 # Handle 404 errors
 /*    /404.html   404
